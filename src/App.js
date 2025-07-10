@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route exact path='/' element={<><Home/><About/><Gallery/><Services/></>}/>
+        <Route exact path='/cheena-makeover' element={<><Home/><About/><Gallery/><Services/></>}/>
         <Route exact path='/bridal' element={<><Bridal/></>}/>
         <Route exact path='/editorial' element={<><Editorial/></>}/>
         <Route exact path='/booking' element={<><Booking/></>}/>

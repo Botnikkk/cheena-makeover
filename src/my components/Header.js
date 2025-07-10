@@ -16,7 +16,7 @@ const Header = () =>  {
   };
 
   const goToPageAndScroll = async (selector) => {
-    await navigate("/");
+    await navigate("/cheena-makeover");
 
     const waitForElement = (selector) =>
       new Promise((resolve) => {
