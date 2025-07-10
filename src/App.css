@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jaldi:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .section {
   height: 100vh;
+  width: 100vw;
   display: block;
   justify-items: center;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #FEFCF3;
+  background-image: url(./my\ components/Images/GALLERYSCREEN.png);
+  background-size: 100% 100%;
 }
 
 /* <------------------------------ HEADER ------------------------------> */
@@ -46,12 +48,14 @@
   background-color:#FEFCF3;
 }
 .NavBarItem{
+  all: unset;
   text-decoration: none;
   font-family: "Crimson Text", serif;
   font-weight: bold;
   font-size: 2rem;
   color: black;
   margin: 0 4rem;
+  cursor: pointer;
 }
 .NavBarItem.active{
   -webkit-text-stroke: 0.02rem black;
@@ -185,10 +189,6 @@
 
 /* <-------------------------------- GALLERY --------------------------------> */
 
-.Gallery{
-  background-image: url(./my\ components/Images/GALLERYSCREEN.png);
-  background-size: 100% 100%;
-}
 .GalleryMainContainer{
   display: flex;
   gap: 15rem;
@@ -241,11 +241,6 @@
 
 /* <-------------------------------- SERVICES --------------------------------> */
 
-.Services{
-  background-image: url(./my\ components/Images/GALLERYSCREEN.png);
-  background-size: 100% 100%;
-}
-
 .MainServiceContainer{
   height: 100%;
   width: 100vw;
@@ -286,7 +281,7 @@
 .CardTitle{
   display: block;
   font-family: "Jaldi", sans-serif;
-  font-size: 5.5rem;
+  font-size: 5rem;
   color: #DBA39A;
   -webkit-text-stroke: .02rem black;
 }
@@ -317,4 +312,82 @@
 }
 .ServiceRuppe{
   font-size: 60%;
+}
+.EditorialContainer{
+  column-gap: 5rem;
+}
+
+/* <-------------------------------- BOOKING --------------------------------> */
+
+.MainBookingContainer{
+  margin-top: 9rem;
+  height: 40rem;
+  width: 80rem;
+  background-color: #FEFCF3;
+  border: .1rem solid black;
+  filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
+  border-radius: 5rem;
+  padding: 5rem 10rem;
+}
+.form {
+  font-family: "Jaldi", sans-serif;
+  font-weight: bold;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+  font-size: 1.6rem;
+}
+
+input,
+textarea,select {
+  border: .1rem solid black;
+  border-radius: 0 1rem 1rem 1rem;
+  filter: drop-shadow(.2rem .2rem .1rem rgba(0, 0, 0, 0.5));
+  padding: 0 0.5rem;
+  background: #F5EBE0;
+  font-size: 1.4rem !important;
+  height: 3rem;
+  resize: none;
+}
+
+textarea {
+  height: 10rem;
+}
+
+.full-width {
+  margin-bottom: 2rem;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.BookingButton {
+  margin: 1rem;
+  display: block;
+  height: 4rem;
+  width: 16rem;
+  background-color: #FFD6BA;
+  border: .12rem solid black;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
+  font-family: "Crimson Text", serif;
 }

@@ -5,16 +5,24 @@ import Home from './my components/Home';
 import About from './my components/About';
 import Gallery from './my components/Gallery';
 import Services from './my components/Services';
+import Bridal from './my components/Bridal';
+import Editorial from './my components/Editorial';
+import Booking from './my components/Booking';
+
+import{BrowserRouter,Routes,Route,Link}from'react-router-dom'
+
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header/>
-      <Home/>  
-      <About/>  
-      <Gallery/>  
-      <Services/>  
-    </>
+      <Routes>
+        <Route exact path='/' element={<><Home/><About/><Gallery/><Services/></>}/>
+        <Route exact path='/bridal' element={<><Bridal/></>}/>
+        <Route exact path='/editorial' element={<><Editorial/></>}/>
+        <Route exact path='/booking' element={<><Booking/></>}/>
+      </Routes>    
+    </BrowserRouter>
   );
 }
 
