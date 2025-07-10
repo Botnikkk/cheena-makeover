@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.section {
+  height: 100vh;
+  display: block;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #FEFCF3;
+}
+
+/* <------------------------------ HEADER ------------------------------> */
+
+.NavBar{
+  position: fixed;
+  z-index:99;
+  top:0;
+  width: 100vw;
+  height: 10vh;
+  background-color: #FEFCF3;
+  border-bottom: .2rem solid #DBA39A;
+}
+.NavContainer{
+  display: flex;
+  height: 10vh;
+  justify-content: flex-end;
+  align-items:flex-end ;
+}
+.NavLogo{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  z-index:100;
+  margin: 0 10rem;
+  padding: .5rem;
+}
+.LogoCover{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 13rem;
+  height: .3rem;
+  z-index: 99;
+  margin: 5.65rem 10rem;
+  background-color:#FEFCF3;
+}
+.NavBarItem{
+  text-decoration: none;
+  font-family: "Crimson Text", serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  margin: 0 4rem;
+}
+.NavBarItem.active{
+  -webkit-text-stroke: 0.02rem black;
+  color: #DBA39A;
+}
+
+/* <-------------------------------- HOME --------------------------------> */
+
+
+.Home{
+  background-image: url(./my\ components/Images/HOMESCREEN.png);
+  background-size: 100% 100%;
+}
+.MainContainer{
+  padding-top: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HomeServiceContainer{
+  position: relative;
+  display: inline-block;
+  align-content: center;
+  aspect-ratio: 0.64;
+  height: 40rem;
+  overflow: hidden;
+  outline: .2rem solid black;
+  outline-offset: .5rem;
+  cursor: pointer;
+  margin: 1rem;
+}
+.HomeServiceText{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: rgba(219, 163, 154, 0.5);
+}
+.TakeMeContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+.HomeLogo{
+  height: 20rem;
+  margin: 5rem;
+  display: block;
+}
+.HomeTakeText{
+  font-family: "Anonymous Pro", monospace;
+  font-weight: bold;
+  font-size: 1.8rem;  
+}
+.HomeLine{
+  height: .2rem;
+  width: 12rem;
+  background-color: black;
+  display: inline-block;
+}
+.HomeLogoContainer{
+  padding-bottom: 5rem;
+}
+.SocialContainer{
+  display: flexbox;
+  text-align: center;
+}
+.SocialText{
+  font-family: "Anonymous Pro", monospace;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.socials{
+  height: 7vh;
+  width: 22rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rem;
+  background-color: rgba(219, 163, 154, 0.5);
+}
+.socials img{
+  aspect-ratio: 1;
+  height: 3rem;
+}
