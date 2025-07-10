@@ -183,3 +183,59 @@
   font-weight: 600;
   font-size: 2rem;
 }
+
+/* <-------------------------------- GALLERY --------------------------------> */
+
+.Gallery{
+  background-image: url(./my\ components/Images/GALLERYSCREEN.png);
+  background-size: 100% 100%;
+}
+.GalleryMainContainer{
+  display: flex;
+  gap: 15rem;
+  padding-top: 15vh;
+}
+.carousel-caption h3{
+  font-family: "Playfair Display", serif;
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: rgba(219, 163, 154, 0.7);
+  border: .1rem solid black;
+  filter: drop-shadow(.1rem .1rem .1rem black);
+}
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1 !important;
+  transition: none !important;
+  
+}
+.custom-arrow {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  color: #000000;
+  background-color: #DBA39A;
+  border: 0.2rem solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  font-family: Arial, sans-serif; 
+  overflow: hidden;
+}
+.CarouselContainer{
+  aspect-ratio: 1;
+  height: 40rem;
+  overflow: hidden;
+  border: .1rem solid black;
+  filter: drop-shadow(.2rem .2rem .5rem black);
+  border-radius: 5%;
+}
+.GalleryImage{
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1;
+  height: 40rem;
+}
