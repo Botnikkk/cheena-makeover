@@ -18,7 +18,7 @@
 
 .NavBar{
   position: fixed;
-  z-index:99;
+  z-index:9;
   top:0;
   width: 100vw;
   height: 10vh;
@@ -46,7 +46,7 @@
   align-items: center;
   width: 13rem;
   height: .3rem;
-  z-index: 99;
+  z-index: 10;
   margin: 5.65rem 10rem;
   background-color:#FEFCF3;
 }
@@ -64,16 +64,28 @@
   -webkit-text-stroke: 0.02rem black;
   color: #DBA39A;
 }
+.mobile-icon {
+  font-size: 5rem;
+  color: #DBA39A;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 1rem;
+  z-index: 9999;
+  bottom: 1rem;
+}
+
 
 /* <-------------------------------- HOME --------------------------------> */
 
 
 .Home{
-  background-image: url(./my\ components/Images/HOMESCREEN.png);
   background-size: 100% 100%;
 }
 .MainHomeContainer{
-  padding-top: 15vh;
+  padding-top: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,12 +95,16 @@
   display: inline-block;
   align-content: center;
   aspect-ratio: 0.64;
-  height: 40rem;
+  height: 35rem;
   overflow: hidden;
   outline: .2rem solid black;
   outline-offset: .5rem;
   cursor: pointer;
   margin: 1rem;
+  object-fit:contain;
+}
+.HomeServiceContainer img{
+  width: 100%;
 }
 .HomeServiceText{
   position: absolute;
@@ -111,23 +127,29 @@
   margin: 5rem;
   display: block;
 }
+.HomeLogoContainer{
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .HomeTakeText{
   font-family: "Anonymous Pro", monospace;
   font-weight: bold;
-  font-size: 1.8rem;  
+  font-size: 1.5rem;  
 }
 .HomeLine{
   height: .2rem;
-  width: 12rem;
+  width: 10rem;
   background-color: black;
   display: inline-block;
 }
-.HomeLogoContainer{
-  padding-bottom: 5rem;
-}
+
 .SocialContainer{
-  display: flexbox;
+  display: inline-block;
+  margin-top: 2rem;
   text-align: center;
+
 }
 .SocialText{
   font-family: "Anonymous Pro", monospace;
@@ -153,7 +175,7 @@
 /* <-------------------------------- ABOUT --------------------------------> */
 
 .About{
-  background-image: url(./my\ components/Images/ABOUTSCREEN.png);
+  background-image: url(./my\ components/Images/ABOUTSCREEN.png) !important;
   background-size: 100% 100%;
 }
 
@@ -174,7 +196,7 @@
 .AboutTextContainer{
   display: inline-block;
   margin-left: 2rem;
-  width: 65%;
+  width: 60vw;
 }
 .AboutTitle{
   font-family: "Crimson Text", serif;
@@ -187,7 +209,7 @@
 .AboutText{
   font-family: "Crimson Text", serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 /* <-------------------------------- GALLERY --------------------------------> */
@@ -204,6 +226,7 @@
   font-weight: bold;
   background-color: rgba(219, 163, 154, 0.7);
   border: .1rem solid black;
+  border-radius: 5rem;
   filter: drop-shadow(.1rem .1rem .1rem black);
 }
 .carousel-control-prev,
@@ -237,7 +260,7 @@
 }
 .GalleryImage{
   object-fit: cover;
-  object-position: center;
+  object-position: 25% 25%; 
   aspect-ratio: 1;
   height:35rem;
 }
@@ -265,9 +288,12 @@
 }
 .ServiceLine{
   height: .2rem;
-  width: 38% ;
+  width: 40vw ;
   background-color: black;
   display: inline-block;
+}
+.Services .ServiceLine{
+  width: 33vw;
 }
 .ServiceCard{
   aspect-ratio: 1;
@@ -305,7 +331,7 @@
   margin: 2rem;
   display: block;
   height: 4rem;
-  width: 20rem;
+  aspect-ratio: 5;
   background-color: #FFD6BA;
   border: .12rem solid black;
   border-radius: 1rem;
@@ -317,7 +343,7 @@
   font-size: 60%;
 }
 .EditorialContainer{
-  column-gap: 5rem;
+  column-gap: 4rem;
 }
 
 /* <-------------------------------- BOOKING --------------------------------> */
@@ -393,4 +419,323 @@ textarea {
   font-weight: 600;
   filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
   font-family: "Crimson Text", serif;
+}
+
+@media only screen and (max-width:1600px){
+    :root{
+      font-size: 90%;
+    }
+
+}
+@media only screen and (max-width:1400px){
+    :root{
+      font-size: 80%;
+    }
+
+}
+@media only screen and (max-width:1200px){
+    .EditorialContainer{
+        column-gap: 2rem;
+    }
+    .EditorialContainer .ServiceCard{
+      width: 25rem;
+    }
+    .EditorialContainer .CardTitle{
+      font-size: 4rem;
+    }
+    .AboutTextContainer{
+      width: 50vw;
+    }
+    .AboutTitle{
+      font-size: 2.5rem;
+    }
+    .AboutText{
+      font-size: 1.5rem;
+    }
+    .AboutPicture{
+      height: 46rem;
+    }
+    .AboutTitle{
+      font-size: 2.5rem;
+    }
+    .AboutText{
+      font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width:1100px){
+  :root{
+    font-size: 75%;
+  }
+  .AboutPicture{
+    height: 50rem;
+  }
+}
+@media only screen and (max-width:1000px){
+  :root{
+    font-size: 65%;
+  }
+  .AboutTextContainer{
+    width: 45vw;
+  }
+
+  .AboutPicture{
+    height: 55rem;
+  }
+}
+@media only screen and (max-width:900px){
+  .mobile-icon {
+    display: block;
+  }
+  .NavContainer {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f9f1e8;
+    padding: 1rem;
+    z-index: 999;
+    transition: all .5s ease-in-out;
+    transform: translateX(+100%);
+  }
+  .NavContainer.active {
+    transform: translateX(0);
+    transition: all .5s ease-in-out;
+  }
+  .NavBarItem {
+    margin: 5rem 0;
+    font-size: 5rem;
+  }
+  .NavLogo{
+    height: 10rem;
+    margin-left: 2rem;
+  }
+  .HomeLogo{
+    display: none;
+  }
+  .HomeLogoContainer{
+    margin-top: 80rem;
+    position: absolute;
+  }
+  .MainHomeContainer{
+    padding-top: 0;
+    padding-bottom: 30rem;
+  }
+  .HomeServiceContainer{
+    height: 50rem;
+    margin: 3rem;
+  }
+  .TakeMeContainer{
+    gap: 1rem;
+    margin: 5rem;
+  }
+  .HomeTakeText{
+    font-size: 3rem;
+  }
+  .HomeLine{
+    height: .3rem;
+  }
+  .SocialText{
+    font-size: 3rem;
+  }
+  .socials{
+    width: 40rem;
+    height: 10rem;
+    gap: 3rem;
+  }
+  .socials img{
+    height: 6rem;
+  }
+  .AboutTextContainer{
+    padding-top: 5rem;
+    width: 40vw;
+  }
+  .GalleryMainContainer{
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .CarouselContainer, .GalleryImage{
+    height: 50rem;
+  }
+  .carousel-caption h3{
+    font-size: 5rem;
+  }
+  .MainServiceContainer{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5rem;
+    width: 100%;
+  }
+  .EditorialContainer .ServiceCard{
+    width: 35rem;
+  }
+  .Editorial{
+    height: 100vh;
+  }
+  .ServiceCard{
+    height: 35rem;
+  }
+  .CardTitle{
+    font-size: 6rem;
+  }
+  .CardPrice{
+    font-size: 5rem;
+  }
+  .CardInText{
+    font-size: 1.5rem;
+  }
+  .CardButton{
+    height: 5rem;
+  }
+  .MainBookingContainer{
+    height: 70rem;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-row{
+    flex-direction: column;
+  }
+  .form-group label {
+    font-size: 2rem;
+  }
+
+  input,textarea,select {
+    height: 5rem;
+    width: 70vw;
+  }
+  textarea{
+    height: 15rem;
+  }
+  .BookingButton{
+    font-size: 3em;
+    height: 6rem;
+    width: 30rem;
+  }
+  .section{
+    background-image: url(./my\ components/Images/GALLERYSCREEN900.png);
+    height: 120vh;
+  }
+  .Booking .About, .Home{
+    height: 110vh;
+  }
+}
+
+@media only screen and (max-width:800px){
+  :root{
+    font-size: 60%;
+  }
+}
+@media only screen and (max-width:800px){
+  :root{
+    font-size: 60%;
+  }
+}
+@media only screen and (max-width:700px){
+  .NavLogo{
+    height: 10rem;
+    margin-left: 2rem;
+  }
+  .HomeServiceContainer{
+    height: 45rem;
+    margin: 1.5rem;
+  }
+  .HomeLogoContainer{
+    margin-top: 75rem;
+  }
+  .HomeTakeText{
+    font-size: 3rem;
+  }
+  .HomeLine{
+    height: .2rem;
+  }
+  .socials{
+    height: 8rem;
+  }
+  .About{
+    height: 115vh;
+  }
+  .MainAboutContainer{
+    flex-direction: column;
+  }
+  .Booking{
+    height: 100vh;
+  }
+  .AboutPicture{
+    margin: 0;
+    height:35rem;
+  }
+  .AboutTitle{
+    font-size: 4rem;
+  }
+  .AboutText{
+    font-size: 2rem;
+  }
+  .AboutTextContainer{
+    padding: 2rem;
+    text-align: center;
+    width: 90vw;
+  }
+
+}
+
+@media only screen and (max-width:600px){
+  :root{
+    font-size: 60%
+  }
+  .HomeServiceContainer{
+    height: 40rem;
+    margin: 1.5rem;
+  }
+  .HomeLogoContainer{
+    margin-top: 70rem;
+  }
+  .HomeTakeText{
+    font-size: 2.5rem;
+  }
+  .HomeLine{
+    height: .1rem;
+  }
+  .CarouselContainer, .GalleryImage{
+    height: 45rem;
+  }
+  .carousel-caption h3{
+    font-size: 4.5rem;
+  }
+  .Services .ServiceLine{
+    width: 25vw;
+  }
+}
+
+@media only screen and (max-width:500px){
+  :root{
+    font-size: 50%;
+  }
+  .HomeServiceContainer{
+    height: 35rem;
+    margin: 1.5rem;
+  }
+  .HomeLogoContainer{
+    margin-top: 65rem;
+  }
+  .HomeTakeText{
+    font-size: 2.5rem;
+  }
+  .HomeLine{
+    height: .1rem;
+  }
+}
+@media only screen and (max-width:350px){
+  .CarouselContainer, .GalleryImage{
+    height: 35rem;
+  }
+  .carousel-caption h3{
+    font-size: 3.5rem;
+  }
 }

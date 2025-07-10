@@ -8,7 +8,7 @@ export default function Services() {
         <div className='MainServiceContainer'>
             <div className='ServiceTitleContainer'>
                 <div className='ServiceLine'></div>
-                <span className='ServiceTitle'>Choose your service</span>
+                <span className='ServiceTitle'>Choose a service</span>
                 <div className='ServiceLine'></div>
             </div>
             <div className='ServiceCard'>
