@@ -3,7 +3,7 @@ import React from 'react'
 export default function Home() {
   return (
     < div className='section Home'>
-        <div id='home' className='MainContainer'>
+        <div id='home' className='MainHomeContainer'>
             <div onClick={() => window.location.href = '#services'} className='HomeServiceContainer'>
                 <img className='HomeImage' src={require('./Images/bridal.png')} alt='BRIDAL'/>
                 <div className='HomeServiceText'>BRIDAL</div>
