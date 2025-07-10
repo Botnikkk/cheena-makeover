@@ -1,13 +1,16 @@
 import React from 'react'
+import{Link}from'react-router-dom'
 
 export default function Home() {
   return (
     < div className='section Home'>
         <div id='home' className='MainHomeContainer'>
-            <div onClick={() => window.location.href = '#services'} className='HomeServiceContainer'>
-                <img className='HomeImage' src={require('./Images/bridal.png')} alt='BRIDAL'/>
-                <div className='HomeServiceText'>BRIDAL</div>
-            </div>
+            <Link className='LINK' to='/bridal'>
+                <div className='HomeServiceContainer'>
+                    <img className='HomeImage' src={require('./Images/bridal.png')} alt='BRIDAL'/>
+                    <div className='HomeServiceText'>BRIDAL</div>
+                </div>
+            </Link>
             <div className='HomeLogoContainer'>
                 <img className='HomeLogo' src={require('./Images/logo.png')} alt='LOGO'/>
                 <div className='TakeMeContainer'>
@@ -16,10 +19,12 @@ export default function Home() {
                     <div className='HomeLine'></div>
                 </div>
             </div>
-            <div onClick={() => window.location.href = '#services'} className='HomeServiceContainer'>
-                <img className='HomeImage' src={require('./Images/editorial.png')} alt='EDITORIAL'/>
-                <div className='HomeServiceText'>EDITORIAL</div>
-            </div>
+            <Link className='LINK' to='/bridal'>
+                <div className='HomeServiceContainer'>
+                    <img className='HomeImage' src={require('./Images/editorial.png')} alt='EDITORIAL'/>
+                    <div className='HomeServiceText'>EDITORIAL</div>
+                </div>
+            </Link>
         </div>
         <div className='SocialContainer'>
                 <span className="SocialText">GET IN TOUCH</span>
