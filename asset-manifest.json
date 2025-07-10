@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cheena-makevover/static/css/main.ddea9bcd.css",
+    "main.js": "/cheena-makevover/static/js/main.b8a9bc24.js",
+    "static/js/453.404aa38f.chunk.js": "/cheena-makevover/static/js/453.404aa38f.chunk.js",
+    "static/media/bridal.png": "/cheena-makevover/static/media/bridal.1e2638a8a31eec67e8bf.png",
+    "static/media/editorial.png": "/cheena-makevover/static/media/editorial.6f3a98a65e7e45fc9778.png",
+    "static/media/logo.png": "/cheena-makevover/static/media/logo.5cbb0d72e16476edd554.png",
+    "static/media/HOMESCREEN.png": "/cheena-makevover/static/media/HOMESCREEN.79a804e25c2897d2ce61.png",
+    "static/media/instagram.png": "/cheena-makevover/static/media/instagram.28944b9a16197e849f88.png",
+    "static/media/whatsapp.png": "/cheena-makevover/static/media/whatsapp.c826b0165560636baf0b.png",
+    "static/media/mobile.png": "/cheena-makevover/static/media/mobile.edac4a352c3fae765c3f.png",
+    "index.html": "/cheena-makevover/index.html",
+    "main.ddea9bcd.css.map": "/cheena-makevover/static/css/main.ddea9bcd.css.map",
+    "main.b8a9bc24.js.map": "/cheena-makevover/static/js/main.b8a9bc24.js.map",
+    "453.404aa38f.chunk.js.map": "/cheena-makevover/static/js/453.404aa38f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddea9bcd.css",
+    "static/js/main.b8a9bc24.js"
+  ]
+}
