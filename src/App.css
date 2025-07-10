@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jaldi:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .section {
   height: 100vh;
   display: block;
@@ -227,7 +226,7 @@
 }
 .CarouselContainer{
   aspect-ratio: 1;
-  height: 40rem;
+  height: 35rem;
   overflow: hidden;
   border: .1rem solid black;
   filter: drop-shadow(.2rem .2rem .5rem black);
@@ -237,5 +236,85 @@
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1;
-  height: 40rem;
+  height:35rem;
+}
+
+/* <-------------------------------- SERVICES --------------------------------> */
+
+.Services{
+  background-image: url(./my\ components/Images/GALLERYSCREEN.png);
+  background-size: 100% 100%;
+}
+
+.MainServiceContainer{
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 15vh;
+  column-gap: 20rem;
+  flex-wrap: wrap;
+}
+.ServiceTitleContainer{
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+}
+.ServiceLine{
+  height: .2rem;
+  width: 38% ;
+  background-color: black;
+  display: inline-block;
+}
+.ServiceCard{
+  aspect-ratio: 1;
+  height: 30rem;
+  background-color: #FEFCF3;
+  border: .1rem solid black;
+  border-radius: 10%;
+  display: flexbox;
+  align-content: center;
+  justify-items: center;
+  font-family: "Crimson Text", serif;
+  filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
+}
+.CardTitle{
+  display: block;
+  font-family: "Jaldi", sans-serif;
+  font-size: 5.5rem;
+  color: #DBA39A;
+  -webkit-text-stroke: .02rem black;
+}
+.CardPrice{
+  display: block;
+  font-size: 4rem;
+}
+.CardInText{
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+}
+.CardOutText{
+  margin-top: 2rem;
+  display: block;
+  font-size: 1.5rem
+}
+.CardButton{
+  margin: 2rem;
+  display: block;
+  height: 4rem;
+  width: 20rem;
+  background-color: #FFD6BA;
+  border: .12rem solid black;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
+}
+.ServiceRuppe{
+  font-size: 60%;
 }
