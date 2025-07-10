@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cheena-makeover/static/css/main.b6a0afe9.css",
-    "main.js": "/cheena-makeover/static/js/main.e4a54acd.js",
+    "main.js": "/cheena-makeover/static/js/main.a2f305f3.js",
     "static/js/453.404aa38f.chunk.js": "/cheena-makeover/static/js/453.404aa38f.chunk.js",
     "static/media/bridal.png": "/cheena-makeover/static/media/bridal.1e2638a8a31eec67e8bf.png",
     "static/media/about.png": "/cheena-makeover/static/media/about.3d99358c7f7788f2c57e.png",
@@ -15,11 +15,11 @@
     "static/media/mobile.png": "/cheena-makeover/static/media/mobile.edac4a352c3fae765c3f.png",
     "index.html": "/cheena-makeover/index.html",
     "main.b6a0afe9.css.map": "/cheena-makeover/static/css/main.b6a0afe9.css.map",
-    "main.e4a54acd.js.map": "/cheena-makeover/static/js/main.e4a54acd.js.map",
+    "main.a2f305f3.js.map": "/cheena-makeover/static/js/main.a2f305f3.js.map",
     "453.404aa38f.chunk.js.map": "/cheena-makeover/static/js/453.404aa38f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6a0afe9.css",
-    "static/js/main.e4a54acd.js"
+    "static/js/main.a2f305f3.js"
   ]
 }
