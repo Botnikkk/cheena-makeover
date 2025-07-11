@@ -4,8 +4,8 @@ import { Link as ScrollLink } from "react-scroll";
 import * as Scroll from "react-scroll";
 
 const Header = () =>  {
+  
   const [menuOpen, setMenuOpen] = useState(false);
-
   const path = useLocation().pathname;
   const location = path.split("/")[1];
   const navigate = useNavigate();
@@ -30,67 +30,22 @@ const Header = () =>  {
       });
 
     await waitForElement(selector);
-
-    scroller.scrollTo(selector, {
-      duration: 500,
-      delay: 0,
-      smooth: true,
-    });
-
-    setMenuOpen(false); // close menu after click
+    scroller.scrollTo(selector, {duration: 500,delay: 0});
+    setMenuOpen(false);
   };
   return (
     <>
       <nav className="NavBar">
-      <a>
-        <img className="NavLogo" src={require("./Images/logo.png")} alt="LOGO" />
-      </a>
-
+      <img className="NavLogo" src={require("./Images/logo.png")} alt="LOGO"/>
       <div className="LogoCover" />
-
-      <button className="mobile-icon" onClick={toggleNavbar}>
-        ☰
-      </button>
-
+      <button className="mobile-icon" onClick={toggleNavbar}>☰</button>
       <div className={`NavContainer ${menuOpen ? "active" : ""}`}>
         {location === "" ? (
           <>
-            <ScrollLink
-              to="home"
-              spy={true}
-              duration={500}
-              className="NavBarItem"
-              onClick={() => setMenuOpen(false)}
-            >
-              HOME
-            </ScrollLink>
-            <ScrollLink
-              to="about"
-              spy={true}
-              duration={500}
-              className="NavBarItem"
-              onClick={() => setMenuOpen(false)}
-            >
-              ABOUT
-            </ScrollLink>
-            <ScrollLink
-              to="gallery"
-              spy={true}
-              duration={500}
-              className="NavBarItem"
-              onClick={() => setMenuOpen(false)}
-            >
-              GALLERY
-            </ScrollLink>
-            <ScrollLink
-              to="services"
-              spy={true}
-              duration={500}
-              className="NavBarItem"
-              onClick={() => setMenuOpen(false)}
-            >
-              SERVICE
-            </ScrollLink>
+            <ScrollLink to="home" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>HOME</ScrollLink>
+            <ScrollLink to="about" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>ABOUT</ScrollLink>
+            <ScrollLink to="gallery" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>GALLERY</ScrollLink>
+            <ScrollLink to="services" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>SERVICE</ScrollLink>
           </>
         ) : (
           <>

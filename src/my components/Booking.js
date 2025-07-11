@@ -1,53 +1,32 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 export default function Booking() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState({ name: "",email: "",phone: "",service: "",message: "",});
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-  
+    const { name, value } = e.target; 
     if (name === "phone") {
-      const digits = value.replace(/\D/g, "").substring(0, 10);
-  
-      const formatted = digits
-        .replace(/(\d{3})(\d{3})(\d{0,4})/, (match, p1, p2, p3) => {
-          return p3 ? `${p1}-${p2}-${p3}` : `${p1}-${p2}`;
-        });
-  
-      setFormData((prev) => ({
-        ...prev,
-        [name]: formatted,
-      }));
+      const digits = value.replace(/\D/g, "").substring(0, 10);  
+      const formatted = digits.replace(/(\d{3})(\d{3})(\d{0,4})/, (match, p1, p2, p3) => {return p3 ? `${p1}-${p2}-${p3}` : `${p1}-${p2}`;}); 
+      setFormData((prev) => ({...prev, [name]: formatted,}));
     } else {
-      setFormData((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
+      setFormData((prev) => ({...prev,[name]: value,})); 
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
     const message = `Hello! My name is ${formData.name} and i would like to inquire about ${formData.service} makeup. You can contact me here ${formData.phone} and here ${formData.email}
-
+  
     ${formData.message}
     
     Please reply soon!`;
     
-      const encodedMessage = encodeURIComponent(message);
-    
-      const yourNumber = "917428147159";
-      const whatsappUrl = `https://wa.me/${yourNumber}?text=${encodedMessage}`;
-    
-      window.open(whatsappUrl, "_blank");
+    const encodedMessage = encodeURIComponent(message);
+    const myNumber = "917428147159";
+    const whatsappUrl = `https://wa.me/${myNumber}?text=${encodedMessage}`;
+  
+    window.open(whatsappUrl, "_blank");
   };
   return (
     <div className='section Booking'>
