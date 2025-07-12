@@ -3,8 +3,8 @@ import{Link}from'react-router-dom'
 
 export default function Home() {
   return (
-    < div className='section Home'>
-        <div id='home' className='MainHomeContainer'>
+    < div  id='home' className='section Home'>
+        <div className='MainHomeContainer'>
             <Link className='LINK' to='/bridal'>
                 <div className='HomeServiceContainer'>
                     <img className='HomeImage' src={require('./Images/bridal.png')} alt='BRIDAL'/>
