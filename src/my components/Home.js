@@ -27,10 +27,10 @@ const handleCopy = () => {
                 <div className='SocialContainer'>
                     <span className="SocialText">GET IN TOUCH</span>
                     <div className="socials">
-                        <a target="_blank" href="https://www.instagram.com/cheenamakeover" className="social"><img src={require('./Images/instagram.png')} alt="Instragram"/></a>
-                        <a target="_blank" href="#" className="social"><img src={require('./Images/facebook.png')} alt="Facebook"/></a>
-                        <a target="_blank" href="https://wa.me/7428147159?text=I'm%20interested%20in%20your%20car%20for%20sale" className="social"><img src={require('./Images/whatsapp.png')} alt="WhatsApp"/></a>
-                        <a onClick={handleCopy} href="" className="social"><img src={require('./Images/mobile.png')} alt="Phone"/></a>
+                        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/cheenamakeover" className="social"><img src={require('./Images/instagram.png')} alt="Instragram"/></a>
+                        <a target="_blank" rel="noreferrer" href="https://www.facebook.com/" className="social"><img src={require('./Images/facebook.png')} alt="Facebook"/></a>
+                        <a target="_blank" rel="noreferrer" href="https://wa.me/7428147159?text=I'm%20interested%20in%20your%20car%20for%20sale" className="social"><img src={require('./Images/whatsapp.png')} alt="WhatsApp"/></a>
+                        <img onClick={handleCopy} className="social"src={require('./Images/mobile.png')} alt="Phone"/>
                     </div>
                 </div>
             </div>
