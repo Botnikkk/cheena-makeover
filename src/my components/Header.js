@@ -14,7 +14,7 @@ const Header = () =>  {
   const toggleNavbar = () => {setMenuOpen(prev => !prev);};
 
   const goToPageAndScroll = async (selector) => {
-    await navigate("/cheena-makeover");
+    await navigate("/");
 
     const waitForElement = (selector) =>
       new Promise((resolve) => {

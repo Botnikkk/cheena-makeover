@@ -15,7 +15,7 @@ export default function Gallery() {
     <div id='gallery' className='section Gallery'>
       <div className='GalleryMainContainer'>
         <div className='CarouselContainer'>
-          <Carousel fade prevIcon={<img src={LeftArrow} alt='left-arrow'/>} nextIcon={<img src={RightArrow} alt='right-arrow'/>}>
+          <Carousel fade prevIcon={<img className='GalleryArrow'  src={LeftArrow} alt='left-arrow'/>} nextIcon={<img className='GalleryArrow' src={RightArrow} alt='right-arrow'/>}>
             {bridalImages.map((imgSrc, index) => (
               <Carousel.Item key={`bridal-${index}`}>
                 <img className="GalleryImage d-block w-100" src={imgSrc} alt={`Bridal Slide ${index + 1}`} />
@@ -25,7 +25,7 @@ export default function Gallery() {
           </Carousel>
         </div>
         <div className='CarouselContainer'>
-          <Carousel fade prevIcon={<img src={LeftArrow} alt='left-arrow'/>} nextIcon={<img src={RightArrow} alt='right-arrow'/>}>
+          <Carousel fade prevIcon={<img className='GalleryArrow' src={LeftArrow} alt='left-arrow'/>} nextIcon={<img className='GalleryArrow' src={RightArrow} alt='right-arrow'/>}>
             {editorialImages.map((imgSrc, index) => (
               <Carousel.Item key={`editorial-${index}`}>
                 <img className="GalleryImage d-block w-100" src={imgSrc} alt={`Editorial Slide ${index + 1}`} />
