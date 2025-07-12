@@ -25,13 +25,13 @@ export default function Editorial() {
                 <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>20,000</span>
                 <Link style={{ textDecoration: 'none', display:'block' }} to='/booking'><button className='CardButton'>Book Now</button></Link>
             </div>
-            <div className='ServiceCard'>
+            {/* <div className='ServiceCard'>
                 <span className='CardTitle'>Group</span>
                 <span className='CardPrice'><span className='ServiceRuppe'>₹</span>00,000</span>
                 <span className='CardInText'>In Delhi/NCR</span>
                 <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>00,000</span>
                 <Link style={{ textDecoration: 'none', display:'block' }} to='/booking'><button className='CardButton'>Book Now</button></Link>
-            </div>
+            </div> */}
         </div>
     </div>
   )
