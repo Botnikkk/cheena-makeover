@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function Booking() {
   const [formData, setFormData] = useState({ name: "",email: "",phone: "",service: "",message: "",});
-
+  const phoneNumber = process.env.REACT_APP_PHONE_NUMBER;
   const handleChange = (e) => {
     const { name, value } = e.target; 
     if (name === "phone") {
@@ -23,8 +23,7 @@ export default function Booking() {
     Please reply soon!`;
     
     const encodedMessage = encodeURIComponent(message);
-    const myNumber = "917428147159";
-    const whatsappUrl = `https://wa.me/${myNumber}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   
     window.open(whatsappUrl, "_blank");
   };

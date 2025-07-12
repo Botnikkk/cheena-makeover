@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import React, { Suspense, lazy } from 'react';
+import React, { lazy } from 'react';
 
 import Header from './my components/Header';
 import Home from './my components/Home';
