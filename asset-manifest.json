@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cheena-makeover/static/css/main.a19b47b9.css",
-    "main.js": "/cheena-makeover/static/js/main.56a4d05a.js",
+    "main.css": "/cheena-makeover/static/css/main.6aea176a.css",
+    "main.js": "/cheena-makeover/static/js/main.6d5a78eb.js",
     "static/js/569.b85872ee.chunk.js": "/cheena-makeover/static/js/569.b85872ee.chunk.js",
     "static/js/25.f19fd58c.chunk.js": "/cheena-makeover/static/js/25.f19fd58c.chunk.js",
     "static/js/453.befa3028.chunk.js": "/cheena-makeover/static/js/453.befa3028.chunk.js",
@@ -23,15 +23,15 @@
     "index.html": "/cheena-makeover/index.html",
     "static/media/left-arrow.svg": "/cheena-makeover/static/media/left-arrow.ca683cc1c1ea48100497e17008132283.svg",
     "static/media/right-arrow.svg": "/cheena-makeover/static/media/right-arrow.4c471f4d85c6c37d6f3b530839a193fe.svg",
-    "main.a19b47b9.css.map": "/cheena-makeover/static/css/main.a19b47b9.css.map",
-    "main.56a4d05a.js.map": "/cheena-makeover/static/js/main.56a4d05a.js.map",
+    "main.6aea176a.css.map": "/cheena-makeover/static/css/main.6aea176a.css.map",
+    "main.6d5a78eb.js.map": "/cheena-makeover/static/js/main.6d5a78eb.js.map",
     "569.b85872ee.chunk.js.map": "/cheena-makeover/static/js/569.b85872ee.chunk.js.map",
     "25.f19fd58c.chunk.js.map": "/cheena-makeover/static/js/25.f19fd58c.chunk.js.map",
     "453.befa3028.chunk.js.map": "/cheena-makeover/static/js/453.befa3028.chunk.js.map",
     "407.e00a4072.chunk.js.map": "/cheena-makeover/static/js/407.e00a4072.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a19b47b9.css",
-    "static/js/main.56a4d05a.js"
+    "static/css/main.6aea176a.css",
+    "static/js/main.6d5a78eb.js"
   ]
 }
