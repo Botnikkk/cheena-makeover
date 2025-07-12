@@ -211,6 +211,10 @@
   display: flex;
   gap: 15rem;
 }
+.GalleryArrow{
+  aspect-ratio: 1;
+  height: 3rem;
+}
 .carousel-caption h3{
   font-family: "Playfair Display", serif;
   color: black;
@@ -440,6 +444,9 @@ textarea {
   }
 }
 @media only screen and (max-width:900px){
+  :root{
+    font-size: 50%;
+  }
   .section{
     background-image: url(./my\ components/Images/MainScreen900.png);
   }
@@ -600,11 +607,6 @@ textarea {
     width: 30rem;
   }
 }
-@media only screen and (max-width:800px){
-  :root{
-    font-size: 60%;
-  }
-}
 @media only screen and (max-width:700px){
   .NavLogo{
     height: 10rem;
@@ -650,7 +652,7 @@ textarea {
   .AboutText{
     font-size: 2rem;
   }
-  .CarouselContainer, .GalleryImage{
+  .CarouselContainer, .GalleryImage,.ServiceCard{
     height: 45rem;
   }
   .carousel-caption h3{
@@ -683,11 +685,29 @@ textarea {
     height: .1rem;
   }
 }
+@media only screen and (max-width:400px){
+  :root{
+    font-size: 40%;
+  }
+}
 @media only screen and (max-width:350px){
-  .CarouselContainer, .GalleryImage{
+  :root{
+    font-size: 35%;
+  }
+  .CarouselContainer, .GalleryImage,.ServiceCard{
     height: 35rem;
   }
   .carousel-caption h3{
     font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width:350px){
+  :root{
+    font-size: 30%;
+  }
+}
+@media only screen and (max-width:200px){
+  :root{
+    font-size: 20%;
   }
 }
