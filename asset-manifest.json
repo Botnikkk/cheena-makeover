@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/cheena-makeover/static/css/main.ef19f420.css",
-    "main.js": "/cheena-makeover/static/js/main.18c7df00.js",
+    "main.css": "/cheena-makeover/static/css/main.5a07f9f2.css",
+    "main.js": "/cheena-makeover/static/js/main.70b3720f.js",
     "static/js/453.befa3028.chunk.js": "/cheena-makeover/static/js/453.befa3028.chunk.js",
     "static/media/bridal.png": "/cheena-makeover/static/media/bridal.1e2638a8a31eec67e8bf.png",
     "static/media/about.png": "/cheena-makeover/static/media/about.3d99358c7f7788f2c57e.png",
     "static/media/editorial.png": "/cheena-makeover/static/media/editorial.6f3a98a65e7e45fc9778.png",
     "static/media/logo.png": "/cheena-makeover/static/media/logo.5cbb0d72e16476edd554.png",
-    "static/media/ABOUTSCREEN.png": "/cheena-makeover/static/media/ABOUTSCREEN.48cb48dd94ffdb38bdd9.png",
-    "static/media/GALLERYSCREEN.png": "/cheena-makeover/static/media/GALLERYSCREEN.1b24331b343de0c67a59.png",
-    "static/media/GALLERYSCREEN900.png": "/cheena-makeover/static/media/GALLERYSCREEN900.c3a66d8dc55e24b57f80.png",
+    "static/media/AboutScreen.png": "/cheena-makeover/static/media/AboutScreen.411f8d47f1f866d05ed1.png",
+    "static/media/MainScreen.png": "/cheena-makeover/static/media/MainScreen.1b24331b343de0c67a59.png",
+    "static/media/AboutScreen900.png": "/cheena-makeover/static/media/AboutScreen900.0491204e626e5e119004.png",
+    "static/media/MainScreen900.png": "/cheena-makeover/static/media/MainScreen900.a209fa82192540f36a25.png",
     "static/media/instagram.png": "/cheena-makeover/static/media/instagram.28944b9a16197e849f88.png",
     "static/media/whatsapp.png": "/cheena-makeover/static/media/whatsapp.c826b0165560636baf0b.png",
     "static/media/3.png": "/cheena-makeover/static/media/3.945791df056dd12e8d30.png",
@@ -17,12 +18,14 @@
     "static/media/1.png": "/cheena-makeover/static/media/1.81fb9faecaa7613461c3.png",
     "static/media/mobile.png": "/cheena-makeover/static/media/mobile.edac4a352c3fae765c3f.png",
     "index.html": "/cheena-makeover/index.html",
-    "main.ef19f420.css.map": "/cheena-makeover/static/css/main.ef19f420.css.map",
-    "main.18c7df00.js.map": "/cheena-makeover/static/js/main.18c7df00.js.map",
+    "static/media/left-arrow.svg": "/cheena-makeover/static/media/left-arrow.ca683cc1c1ea48100497e17008132283.svg",
+    "static/media/right-arrow.svg": "/cheena-makeover/static/media/right-arrow.4c471f4d85c6c37d6f3b530839a193fe.svg",
+    "main.5a07f9f2.css.map": "/cheena-makeover/static/css/main.5a07f9f2.css.map",
+    "main.70b3720f.js.map": "/cheena-makeover/static/js/main.70b3720f.js.map",
     "453.befa3028.chunk.js.map": "/cheena-makeover/static/js/453.befa3028.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef19f420.css",
-    "static/js/main.18c7df00.js"
+    "static/css/main.5a07f9f2.css",
+    "static/js/main.70b3720f.js"
   ]
 }
