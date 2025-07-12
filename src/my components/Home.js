@@ -13,7 +13,7 @@ const handleCopy = () => {
         <div className='MainHomeContainer'>
             <Link className='LINK' to='/bridal'>
                 <div className='HomeServiceContainer'>
-                    <img className='HomeImage' src={require('./Images/bridal.webp')} alt='BRIDAL'/>
+                    <img fetchpriority="high" className='HomeImage' src={require('./Images/bridal.webp')} alt='BRIDAL'/>
                     <div className='HomeServiceText'>BRIDAL</div>
                 </div>
             </Link>
