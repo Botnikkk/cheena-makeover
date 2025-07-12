@@ -13,12 +13,12 @@ const handleCopy = () => {
         <div className='MainHomeContainer'>
             <Link className='LINK' to='/bridal'>
                 <div className='HomeServiceContainer'>
-                    <img className='HomeImage' src={require('./Images/bridal.png')} alt='BRIDAL'/>
+                    <img className='HomeImage' src={require('./Images/bridal.webp')} alt='BRIDAL'/>
                     <div className='HomeServiceText'>BRIDAL</div>
                 </div>
             </Link>
             <div className='HomeLogoContainer'>
-                <img className='HomeLogo' src={require('./Images/logo.png')} alt='LOGO'/>
+                <img className='HomeLogo' src={require('./Images/logo.webp')} alt='LOGO'/>
                 <div className='TakeMeContainer'>
                     <div className='HomeLine'></div>
                     <span className='HomeTakeText'>TAKE ME TO</span>
@@ -36,7 +36,7 @@ const handleCopy = () => {
             </div>
             <Link className='LINK' to='/editorial'>
                 <div className='HomeServiceContainer'>
-                    <img className='HomeImage' src={require('./Images/editorial.png')} alt='EDITORIAL'/>
+                    <img className='HomeImage' src={require('./Images/editorial.webp')} alt='EDITORIAL'/>
                     <div className='HomeServiceText'>EDITORIAL</div>
                 </div>
             </Link>

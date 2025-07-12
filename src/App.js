@@ -1,15 +1,18 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
 
 import Header from './my components/Header';
 import Home from './my components/Home';
 import About from './my components/About';
-import Gallery from './my components/Gallery';
-import Services from './my components/Services';
-import Bridal from './my components/Bridal';
-import Editorial from './my components/Editorial';
-import Booking from './my components/Booking';
+
+const Gallery = lazy(() => import('./my components/Gallery'));
+const Services = lazy(() => import('./my components/Services'));
+const Bridal = lazy(() => import('./my components/Bridal'));
+const Editorial = lazy(() => import('./my components/Editorial'));
+const Booking = lazy(() => import('./my components/Booking'));
+
 
 function App() {
   return (

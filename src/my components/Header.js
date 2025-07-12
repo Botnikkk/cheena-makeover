@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
-import * as Scroll from "react-scroll";
+import { Link as ScrollLink, scroller as Scroll } from "react-scroll";
 
 const Header = () =>  {
-  
   const [menuOpen, setMenuOpen] = useState(false);
   const path = useLocation().pathname;
   const location = path.split("/")[1];
   const navigate = useNavigate();
   const scroller = Scroll.scroller;
 
-  const toggleNavbar = () => {setMenuOpen(prev => !prev);};
+  const toggleNavbar = useCallback(() => {setMenuOpen(prev => !prev);}, []);
 
-  const goToPageAndScroll = async (selector) => {
+  const goToPageAndScroll = useCallback(async (selector) => {
     await navigate("/");
-
     const waitForElement = (selector) =>
       new Promise((resolve) => {
         const interval = setInterval(() => {
@@ -26,15 +23,14 @@ const Header = () =>  {
           }
         }, 100);
       });
-
     await waitForElement(selector);
-    scroller.scrollTo(selector, {duration: 500,delay: 0});
+    scroller.scrollTo(selector, { duration: 500, delay: 0 });
     setMenuOpen(false);
-  };
+  }, [navigate, scroller]);
   return (
     <>
       <nav className="NavBar">
-      <img className="NavLogo" src={require("./Images/logo.png")} alt="LOGO"/>
+      <img className="NavLogo" src={require("./Images/logo.webp")} alt="LOGO"/>
       <div className="LogoCover" />
       <button className="mobile-icon" onClick={toggleNavbar}>☰</button>
       <div className={`NavContainer ${menuOpen ? "active" : ""}`}>

@@ -209,6 +209,8 @@
 
 .GalleryMainContainer{
   display: flex;
+  align-items: center;
+  align-content: center;
   gap: 15rem;
 }
 .GalleryArrow{
