@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jaldi:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .section {
   height: 100vh;
   width: 100vw;
@@ -10,7 +9,6 @@
   background-image: url(./my\ components/Images/GALLERYSCREEN.png);
   background-size: 100% 100%;
 }
-
 .LINK{
   all: unset;
 }
@@ -144,7 +142,6 @@
   background-color: black;
   display: inline-block;
 }
-
 .SocialContainer{
   display: inline-block;
   margin-top: 2rem;
