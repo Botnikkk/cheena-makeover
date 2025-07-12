@@ -224,7 +224,7 @@
   color: black;
   font-size: 3rem;
   font-weight: bold;
-  background-color: rgba(219, 163, 154, 0.7);
+  background-color: #FFD6BA;
   border: .1rem solid black;
   border-radius: 5rem;
   filter: drop-shadow(.1rem .1rem .1rem black);
@@ -240,12 +240,12 @@
   height: 3rem;
   font-size: 3rem;
   color: #000000;
-  background-color: #DBA39A;
+  background-color: #FFD6BA;
   border: 0.2rem solid #000000;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(.1rem .1rem .1rem rgba(0, 0, 0, 0.5));
   line-height: 1;
   font-family: Arial, sans-serif; 
   overflow: hidden;
@@ -255,7 +255,7 @@
   height: 35rem;
   overflow: hidden;
   border: .1rem solid black;
-  filter: drop-shadow(.2rem .2rem .5rem black);
+  filter: drop-shadow(.3rem .3rem .3rem rgba(0, 0, 0, 0.5));
   border-radius: 5%;
 }
 .GalleryImage{
