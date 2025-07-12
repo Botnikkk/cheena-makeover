@@ -1,19 +1,16 @@
 {
   "files": {
-    "main.css": "/cheena-makeover/static/css/main.53bfc551.css",
-    "main.js": "/cheena-makeover/static/js/main.3bcf42fb.js",
-    "static/js/569.36b12016.chunk.js": "/cheena-makeover/static/js/569.36b12016.chunk.js",
-    "static/js/25.f03a63ce.chunk.js": "/cheena-makeover/static/js/25.f03a63ce.chunk.js",
-    "static/js/465.8fddb526.chunk.js": "/cheena-makeover/static/js/465.8fddb526.chunk.js",
-    "static/js/584.6069f979.chunk.js": "/cheena-makeover/static/js/584.6069f979.chunk.js",
-    "static/js/618.3f05e8e3.chunk.js": "/cheena-makeover/static/js/618.3f05e8e3.chunk.js",
+    "main.css": "/cheena-makeover/static/css/main.a19b47b9.css",
+    "main.js": "/cheena-makeover/static/js/main.56a4d05a.js",
+    "static/js/569.b85872ee.chunk.js": "/cheena-makeover/static/js/569.b85872ee.chunk.js",
+    "static/js/25.f19fd58c.chunk.js": "/cheena-makeover/static/js/25.f19fd58c.chunk.js",
     "static/js/453.befa3028.chunk.js": "/cheena-makeover/static/js/453.befa3028.chunk.js",
     "static/js/407.e00a4072.chunk.js": "/cheena-makeover/static/js/407.e00a4072.chunk.js",
     "static/media/AboutScreen.png": "/cheena-makeover/static/media/AboutScreen.411f8d47f1f866d05ed1.png",
     "static/media/bridal.webp": "/cheena-makeover/static/media/bridal.0b9215e06722fa633460.webp",
     "static/media/MainScreen.png": "/cheena-makeover/static/media/MainScreen.1b24331b343de0c67a59.png",
     "static/media/AboutScreen900.png": "/cheena-makeover/static/media/AboutScreen900.0491204e626e5e119004.png",
-    "static/media/editorial.webp": "/cheena-makeover/static/media/editorial.5b0d08489b2d33401b7a.webp",
+    "static/media/party.webp": "/cheena-makeover/static/media/party.5b0d08489b2d33401b7a.webp",
     "static/media/logo.webp": "/cheena-makeover/static/media/logo.1a91761ed4b4cbd992f9.webp",
     "static/media/MainScreen900.png": "/cheena-makeover/static/media/MainScreen900.a209fa82192540f36a25.png",
     "static/media/instagram.png": "/cheena-makeover/static/media/instagram.28944b9a16197e849f88.png",
@@ -26,18 +23,15 @@
     "index.html": "/cheena-makeover/index.html",
     "static/media/left-arrow.svg": "/cheena-makeover/static/media/left-arrow.ca683cc1c1ea48100497e17008132283.svg",
     "static/media/right-arrow.svg": "/cheena-makeover/static/media/right-arrow.4c471f4d85c6c37d6f3b530839a193fe.svg",
-    "main.53bfc551.css.map": "/cheena-makeover/static/css/main.53bfc551.css.map",
-    "main.3bcf42fb.js.map": "/cheena-makeover/static/js/main.3bcf42fb.js.map",
-    "569.36b12016.chunk.js.map": "/cheena-makeover/static/js/569.36b12016.chunk.js.map",
-    "25.f03a63ce.chunk.js.map": "/cheena-makeover/static/js/25.f03a63ce.chunk.js.map",
-    "465.8fddb526.chunk.js.map": "/cheena-makeover/static/js/465.8fddb526.chunk.js.map",
-    "584.6069f979.chunk.js.map": "/cheena-makeover/static/js/584.6069f979.chunk.js.map",
-    "618.3f05e8e3.chunk.js.map": "/cheena-makeover/static/js/618.3f05e8e3.chunk.js.map",
+    "main.a19b47b9.css.map": "/cheena-makeover/static/css/main.a19b47b9.css.map",
+    "main.56a4d05a.js.map": "/cheena-makeover/static/js/main.56a4d05a.js.map",
+    "569.b85872ee.chunk.js.map": "/cheena-makeover/static/js/569.b85872ee.chunk.js.map",
+    "25.f19fd58c.chunk.js.map": "/cheena-makeover/static/js/25.f19fd58c.chunk.js.map",
     "453.befa3028.chunk.js.map": "/cheena-makeover/static/js/453.befa3028.chunk.js.map",
     "407.e00a4072.chunk.js.map": "/cheena-makeover/static/js/407.e00a4072.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.53bfc551.css",
-    "static/js/main.3bcf42fb.js"
+    "static/css/main.a19b47b9.css",
+    "static/js/main.56a4d05a.js"
   ]
 }
