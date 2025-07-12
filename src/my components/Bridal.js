@@ -19,7 +19,7 @@ export default function Bridal() {
                 <Link style={{ textDecoration: 'none', display:'block' }} to='/booking'><button className='CardButton'>Book Now</button></Link>
             </div>
             <div className='ServiceCard'>
-                <span className='CardTitle'>HD + Air Brush</span>
+                <span className='CardTitle'>Air Brush</span>
                 <span className='CardPrice'><span className='ServiceRuppe'>₹</span>34,000</span>
                 <span className='CardInText'>In Delhi/NCR</span>
                 <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>40,000</span>

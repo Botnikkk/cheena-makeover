@@ -330,7 +330,7 @@
   aspect-ratio: 5;
   background-color: #FFD6BA;
   border: .12rem solid black;
-  border-radius: 1rem;
+  border-radius: 2rem;
   font-size: 1.8rem;
   font-weight: 600;
   filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
@@ -343,7 +343,7 @@
 .MainBookingContainer{
   margin-top: 9rem;
   height: 40rem;
-  width: 80rem;
+  width: 70rem;
   background-color: #FEFCF3;
   border: .1rem solid black;
   filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
@@ -395,10 +395,10 @@ textarea {
   margin: 1rem;
   display: block;
   height: 4rem;
-  width: 16rem;
+  aspect-ratio:6;
   background-color: #FFD6BA;
   border: .12rem solid black;
-  border-radius: 1rem;
+  border-radius: 2rem;
   font-size: 2rem;
   font-weight: 600;
   filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
@@ -656,9 +656,6 @@ textarea {
   .carousel-caption h3{
     font-size: 4.5rem;
   }
-  .Services .ServiceLine{
-    width: 25vw;
-  }
 }
 @media only screen and (max-width:550px){
   .HomeServiceContainer{
@@ -690,16 +687,13 @@ textarea {
 }
 @media only screen and (max-width:350px){
   :root{
-    font-size: 35%;
-  }
-  .CarouselContainer, .GalleryImage,.ServiceCard{
-    height: 35rem;
+    font-size: 38%;
   }
   .carousel-caption h3{
     font-size: 3.5rem;
   }
 }
-@media only screen and (max-width:350px){
+@media only screen and (max-width:320px){
   :root{
     font-size: 30%;
   }
