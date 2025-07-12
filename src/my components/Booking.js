@@ -52,7 +52,7 @@ export default function Booking() {
                   <select name="service" value={formData.service} onChange={handleChange} required>
                     <option value="">Select a service</option>
                     <option value="Bridal">Bridal</option>
-                    <option value="Editorial">Editorial</option>
+                    <option value="Party">Party</option>
                   </select>
                 </div>
               </div>

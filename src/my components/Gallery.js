@@ -9,7 +9,7 @@ const importAll = (r) => {
 
 export default function Gallery() {
   const bridalImages = importAll(require.context('./Images/Gallery/Bridal', false, /\.(png|jpe?g|svg)$/));
-  const editorialImages = importAll(require.context('./Images/Gallery/Editorial', false, /\.(png|jpe?g|svg)$/));
+  const partyImages = importAll(require.context('./Images/Gallery/Party', false, /\.(png|jpe?g|svg)$/));
 
   return (
     <div id='gallery' className='section Gallery'>
@@ -26,10 +26,10 @@ export default function Gallery() {
         </div>
         <div className='CarouselContainer'>
           <Carousel fade prevIcon={<img className='GalleryArrow' src={LeftArrow} alt='left-arrow'/>} nextIcon={<img className='GalleryArrow' src={RightArrow} alt='right-arrow'/>}>
-            {editorialImages.map((imgSrc, index) => (
-              <Carousel.Item key={`editorial-${index}`}>
-                <img className="GalleryImage d-block w-100" src={imgSrc} alt={`Editorial Slide ${index + 1}`} />
-                <Carousel.Caption><h3>Editorial</h3></Carousel.Caption>
+            {partyImages.map((imgSrc, index) => (
+              <Carousel.Item key={`party-${index}`}>
+                <img className="GalleryImage d-block w-100" src={imgSrc} alt={`Party Slide ${index + 1}`} />
+                <Carousel.Caption><h3>Party</h3></Carousel.Caption>
               </Carousel.Item>
             ))}
           </Carousel>

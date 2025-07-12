@@ -338,10 +338,6 @@
 .ServiceRuppe{
   font-size: 60%;
 }
-.EditorialContainer{
-  column-gap: 4rem;
-}
-
 /* <-------------------------------- BOOKING --------------------------------> */
 
 .MainBookingContainer{
@@ -539,7 +535,7 @@ textarea {
     margin-top: 3rem;
     text-align: center;
   }
-  .Gallery,.Services, .Bridal,.Editorial{
+  .Gallery,.Services, .Bridal,.Party{
     height: 150vh;
   }
   .GalleryMainContainer{

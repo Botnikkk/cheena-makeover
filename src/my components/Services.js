@@ -19,11 +19,11 @@ export default function Services() {
                 <Link style={{ textDecoration: 'none', display:'block' }} to='/bridal'><button className='CardButton'>View Details</button></Link>
             </div>
             <div className='ServiceCard'>
-                <span className='CardTitle'>Editorial</span>
+                <span className='CardTitle'>Party</span>
                 <span className='CardPrice'><span className='ServiceRuppe'>₹</span>8,000</span>
                 <span className='CardInText'>In Delhi/NCR</span>
                 <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>15,000</span>
-                <Link style={{ textDecoration: 'none', display:'block' }} to='/editorial'><button className='CardButton'>View Details</button></Link>
+                <Link style={{ textDecoration: 'none', display:'block' }} to='/party'><button className='CardButton'>View Details</button></Link>
             </div>
         </div>
     </div>

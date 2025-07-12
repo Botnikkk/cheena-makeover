@@ -39,10 +39,10 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <Link className='LINK' to='/editorial'>
+                <Link className='LINK' to='/party'>
                     <div className='HomeServiceContainer'>
-                        <img className='HomeImage' src={require('./Images/editorial.webp')} alt='EDITORIAL'/>
-                        <div className='HomeServiceText'>EDITORIAL</div>
+                        <img className='HomeImage' src={require('./Images/party.webp')} alt='Party'/>
+                        <div className='HomeServiceText'>PARTY</div>
                     </div>
                 </Link>
             </div>

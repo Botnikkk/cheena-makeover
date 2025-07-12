@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Link as ScrollLink, scroller as Scroll } from "react-scroll";
+import { Link as ScrollLink, scroller} from "react-scroll";
 
 const Header = () =>  {
   const [menuOpen, setMenuOpen] = useState(false);
   const path = useLocation().pathname;
   const location = path.split("/")[1];
   const navigate = useNavigate();
-  const scroller = Scroll.scroller;
+
 
   const toggleNavbar = useCallback(() => {setMenuOpen(prev => !prev);}, []);
 
