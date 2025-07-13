@@ -1,16 +1,21 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink, scroller} from "react-scroll";
 
 const Header = () =>  {
+  
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const path = useLocation().pathname;
   const location = path.split("/")[1];
   const navigate = useNavigate();
-
-
   const toggleNavbar = useCallback(() => {setMenuOpen(prev => !prev);}, []);
-
+  useEffect(() => {
+    if (location === "") {
+      window.scrollTo(0, 1);
+      setTimeout(() => {window.scrollTo(0, 0);},50);
+    }
+  }, [location]);
   const goToPageAndScroll = useCallback(async (selector) => {
     await navigate("/");
     const waitForElement = (selector) =>
@@ -26,7 +31,7 @@ const Header = () =>  {
     await waitForElement(selector);
     scroller.scrollTo(selector, { duration: 500, delay: 0 });
     setMenuOpen(false);
-  }, [navigate, scroller]);
+  }, [navigate]);
   return (
     <>
       <nav className="NavBar">
@@ -35,7 +40,7 @@ const Header = () =>  {
       <div className={`NavContainer ${menuOpen ? "active" : ""}`}>
         {location === "" ? (
           <>
-            <ScrollLink to="home" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>HOME</ScrollLink>
+            <ScrollLink to="home"  spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>HOME</ScrollLink>
             <ScrollLink to="about" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>ABOUT</ScrollLink>
             <ScrollLink to="gallery" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>GALLERY</ScrollLink>
             <ScrollLink to="services" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>SERVICE</ScrollLink>

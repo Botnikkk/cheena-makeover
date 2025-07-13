@@ -301,8 +301,6 @@
   font-size: 5rem;
   font-weight:bold;
   color: rgba(var(--text-color));
-  /* -webkit-text-stroke: .2rem rgba(var(--text-color)) ;
-  letter-spacing: .15rem; */
 }
 .CardPrice{
   display: block;
@@ -325,11 +323,11 @@
   height: 4.5rem;
   aspect-ratio: 4;
   background-color: rgba(var(--accent-color));
-  -webkit-text-stroke: .05rem rgba(var(--text-color));
+  -webkit-text-stroke: .1rem rgba(var(--text-color));
   color: rgba(var(--bg-color));
   border: .25rem solid rgba(var(--text-color));
   border-radius: 2rem;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 }
 .ServiceRuppe{
   font-size: 60%;
@@ -395,7 +393,7 @@ textarea {
   height: 4.5rem;
   aspect-ratio: 6;
   background-color: rgba(var(--accent-color));
-  -webkit-text-stroke: .05rem rgba(var(--text-color));
+  -webkit-text-stroke: .1rem rgba(var(--text-color));
   color: rgba(var(--bg-color));
   border: .25rem solid rgba(var(--text-color));
   border-radius: 2rem;
