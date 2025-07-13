@@ -6,8 +6,14 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-image: url(./my\ components/Images/MainScreen.png);
+  background-image: url(./my\ components/Images/MainScreenTest.png);
   background-size: 100% 100%;
+}
+:root {
+  --bg-color: 241, 240, 232;
+  --card-color: 208, 184, 172;
+  --accent-color: 150, 126, 118;
+  --text-color: 75, 59, 59;
 }
 .LINK{
   all: unset;
@@ -20,8 +26,8 @@
   top:0;
   width: 100vw;
   height: 10vh;
-  background-color: #FEFCF3;
-  border-bottom: .2rem solid #DBA39A;
+  background-color: rgba(var(--bg-color));
+  border-bottom: .2rem solid rgba(var(--accent-color));
 }
 .NavContainer{
   display: flex;
@@ -46,7 +52,7 @@
   height: .3rem;
   z-index: 10;
   margin: 5.65rem 10rem;
-  background-color:#FEFCF3;
+  background-color:rgba(var(--bg-color));
 }
 .NavBarItem{
   all: unset;
@@ -54,17 +60,17 @@
   font-family: "Crimson Text", serif;
   font-weight: bold;
   font-size: 2rem;
-  color: black;
+  color: rgba(var(--text-color));
   margin: 0 4rem;
   cursor: pointer;
 }
 .NavBarItem.active{
-  -webkit-text-stroke: 0.02rem black;
-  color: #DBA39A;
+  -webkit-text-stroke: 0.02rem rgba(var(--text-color));
+  color: rgba(var(--accent-color));
 }
 .mobile-icon {
   font-size: 5rem;
-  color: #DBA39A;
+  color: rgba(var(--accent-color));
   border: none;
   background: none;
   cursor: pointer;
@@ -92,7 +98,7 @@
   aspect-ratio: 0.64;
   height: 35rem;
   overflow: hidden;
-  outline: .2rem solid black;
+  outline: .2rem solid rgba(var(--text-color));
   outline-offset: .5rem;
   cursor: pointer;
   margin: 1rem;
@@ -109,7 +115,7 @@
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   font-weight: bold;
-  background-color: rgba(219, 163, 154, 0.5);
+  background-color: rgba(var(--card-color), 0.6);
 }
 .TakeMeContainer{
   display: flex;
@@ -136,7 +142,7 @@
 .HomeLine{
   height: .2rem;
   width: 10rem;
-  background-color: black;
+  background-color: rgba(var(--text-color));
   display: inline-block;
 }
 .SocialContainer{
@@ -159,7 +165,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10rem;
-  background-color: rgba(219, 163, 154, 0.5);
+  background-color: rgba(var(--accent-color));
 }
 .socials img{
   aspect-ratio: 1;
@@ -169,7 +175,7 @@
 /* <-------------------------------- ABOUT --------------------------------> */
 
 .About{
-  background-image: url(./my\ components/Images/AboutScreen.png);
+  background-image: url(./my\ components/Images/AboutScreenTest.png);
   background-size: 100% 100%;
 }
 
@@ -183,7 +189,7 @@
   height: 45rem;
   margin: 12rem 5rem;
   margin-right: 0;
-  border: 1.2rem solid #FEFCF3;
+  border: 1.2rem solid rgba(var(--bg-color));
   display: inline-block;
 }
 .AboutTextContainer{
@@ -219,13 +225,14 @@
 }
 .carousel-caption h3{
   font-family: "Playfair Display", serif;
-  color: black;
+  color: rgba(var(--text-color));
   font-size: 3rem;
   font-weight: bold;
-  background-color: #FFD6BA;
-  border: .1rem solid black;
+  background-color:rgba(var(--card-color));
+  -webkit-text-stroke: .05rem rgba(var(--text-color));
+  border: .1rem solid rgba(var(--text-color));
   border-radius: 5rem;
-  filter: drop-shadow(.1rem .1rem .1rem black);
+  filter: drop-shadow(.1rem .1rem .1rem rgba(var(--text-color)));
 }
 .carousel-control-prev,
 .carousel-control-next {
@@ -233,27 +240,12 @@
   transition: none !important;
   
 }
-.custom-arrow {
-  width: 3rem;
-  height: 3rem;
-  font-size: 3rem;
-  color: #000000;
-  background-color: #FFD6BA;
-  border: 0.2rem solid #000000;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  filter: drop-shadow(.1rem .1rem .1rem rgba(0, 0, 0, 0.5));
-  line-height: 1;
-  font-family: Arial, sans-serif; 
-  overflow: hidden;
-}
 .CarouselContainer{
   margin-top: 10rem;
   aspect-ratio: 1;
   height: 35rem;
   overflow: hidden;
-  border: .1rem solid black;
+  border: .1rem solid rgba(var(--text-color));
   filter: drop-shadow(.3rem .3rem .3rem rgba(0, 0, 0, 0.5));
   border-radius: 5%;
 }
@@ -286,15 +278,15 @@
 }
 .ServiceLine{
   height: .2rem;
-  background-color: black;
+  background-color: rgba(var(--text-color));
   display: inline-block;
   width: 50% ;
 }
 .ServiceCard{
   aspect-ratio: 1;
   height: 30rem;
-  background-color: #FEFCF3;
-  border: .1rem solid black;
+  background-color: rgba(var(--bg-color), 0.9);
+  border: .1rem solid rgba(var(--text-color));
   border-radius: 10%;
   display: flex;
   flex-direction: column;
@@ -307,8 +299,8 @@
   display: block;
   font-family: "Jaldi", sans-serif;
   font-size: 5rem;
-  color: #DBA39A;
-  -webkit-text-stroke: .02rem black;
+  color: rgba(var(--accent-color));
+  -webkit-text-stroke: .02rem rgba(var(--text-color));
 }
 .CardPrice{
   display: block;
@@ -328,8 +320,8 @@
   display: block;
   height: 4rem;
   aspect-ratio: 5;
-  background-color: #FFD6BA;
-  border: .12rem solid black;
+  background-color: rgba(var(--card-color));
+  border: .12rem solid rgba(var(--text-color));
   border-radius: 2rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -344,8 +336,8 @@
   margin-top: 9rem;
   height: 40rem;
   width: 70rem;
-  background-color: #FEFCF3;
-  border: .1rem solid black;
+  background-color: rgba(var(--bg-color));
+  border: .1rem solid rgba(var(--text-color));
   filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
   border-radius: 5rem;
   padding: 5rem 10rem;
@@ -372,7 +364,7 @@
 }
 input,
 textarea,select {
-  border: .1rem solid black;
+  border: .1rem solid rgba(var(--text-color));
   border-radius: 0 1rem 1rem 1rem;
   filter: drop-shadow(.2rem .2rem .1rem rgba(0, 0, 0, 0.5));
   padding: 0 0.5rem;
@@ -397,7 +389,7 @@ textarea {
   height: 4rem;
   aspect-ratio:6;
   background-color: #FFD6BA;
-  border: .12rem solid black;
+  border: .12rem solid rgba(var(--text-color));
   border-radius: 2rem;
   font-size: 2rem;
   font-weight: 600;

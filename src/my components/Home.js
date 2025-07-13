@@ -23,7 +23,7 @@ export default function Home() {
                     </div>
                 </Link>
                 <div className='HomeLogoContainer'>
-                    <img className='HomeLogo' src={require('./Images/logo.webp')} alt='LOGO'/>
+                    <img className='HomeLogo' src={require('./Images/logoTest.png')} alt='LOGO'/>
                     <div className='TakeMeContainer'>
                         <div className='HomeLine'></div>
                         <span className='HomeTakeText'>TAKE ME TO</span>

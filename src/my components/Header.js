@@ -30,7 +30,7 @@ const Header = () =>  {
   return (
     <>
       <nav className="NavBar">
-      <img className="NavLogo" src={require("./Images/logo.webp")} alt="LOGO"/>
+      <img className="NavLogo" src={require("./Images/logoTest.png")} alt="LOGO"/>
       <div className="LogoCover" />
       <button className="mobile-icon" onClick={toggleNavbar}>☰</button>
       <div className={`NavContainer ${menuOpen ? "active" : ""}`}>
