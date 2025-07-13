@@ -1,3 +1,10 @@
+
+:root {
+  --bg-color: 241, 240, 232;
+  --card-color: 208, 184, 172;
+  --accent-color: 150, 126, 118;
+  --text-color: 75, 59, 59;
+}
 .section {
   min-height: 100vh;
   width: 100vw;
@@ -6,14 +13,10 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-image: url(./my\ components/Images/MainScreenTest.png);
+  background-image: url(./my\ components/Images/MainScreen.png);
+  background-color: rgba(var(--bg-color),0.3);
+  background-blend-mode: lighten;
   background-size: 100% 100%;
-}
-:root {
-  --bg-color: 241, 240, 232;
-  --card-color: 208, 184, 172;
-  --accent-color: 150, 126, 118;
-  --text-color: 75, 59, 59;
 }
 .LINK{
   all: unset;
@@ -43,16 +46,9 @@
   z-index:100;
   margin: 0 10rem;
   padding: .5rem;
-}
-.LogoCover{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  width: 13rem;
-  height: .3rem;
-  z-index: 10;
-  margin: 5.65rem 10rem;
-  background-color:rgba(var(--bg-color));
+
+  background-color: rgba(var(--bg-color));
+  border-radius: 4.5rem;
 }
 .NavBarItem{
   all: unset;
@@ -66,11 +62,14 @@
 }
 .NavBarItem.active{
   -webkit-text-stroke: 0.02rem rgba(var(--text-color));
-  color: rgba(var(--accent-color));
+  color: rgba(var(--bg-color));
+  background-color: rgba(var(--text-color));
+  padding: 0 1rem;
+  border-radius: 2rem;
 }
 .mobile-icon {
   font-size: 5rem;
-  color: rgba(var(--accent-color));
+  color: rgba(var(--text-color));
   border: none;
   background: none;
   cursor: pointer;
@@ -127,6 +126,7 @@
   height: 20rem;
   margin: 5rem;
   display: block;
+
 }
 .HomeLogoContainer{
   padding-bottom: 5rem;
@@ -165,17 +165,18 @@
   align-items: center;
   justify-content: center;
   border-radius: 10rem;
-  background-color: rgba(var(--accent-color));
+  border: rgba(var(--accent-color)) .25rem solid;
+  background-color: rgba(var(--text-color));
 }
 .socials img{
   aspect-ratio: 1;
-  height: 3rem;
+  height: 2.7rem;
 }
 
 /* <-------------------------------- ABOUT --------------------------------> */
 
 .About{
-  background-image: url(./my\ components/Images/AboutScreenTest.png);
+  background-image: url(./my\ components/Images/AboutScreen.png);
   background-size: 100% 100%;
 }
 
@@ -225,12 +226,11 @@
 }
 .carousel-caption h3{
   font-family: "Playfair Display", serif;
-  color: rgba(var(--text-color));
   font-size: 3rem;
   font-weight: bold;
-  background-color:rgba(var(--card-color));
-  -webkit-text-stroke: .05rem rgba(var(--text-color));
-  border: .1rem solid rgba(var(--text-color));
+  background-color:rgba(var(--text-color));
+  color: rgba(var(--bg-color));
+  border: .1rem solid rgba(var(--accent-color));
   border-radius: 5rem;
   filter: drop-shadow(.1rem .1rem .1rem rgba(var(--text-color)));
 }
@@ -285,7 +285,7 @@
 .ServiceCard{
   aspect-ratio: 1;
   height: 30rem;
-  background-color: rgba(var(--bg-color), 0.9);
+  background-color: rgba(var(--bg-color));
   border: .1rem solid rgba(var(--text-color));
   border-radius: 10%;
   display: flex;
@@ -299,8 +299,10 @@
   display: block;
   font-family: "Jaldi", sans-serif;
   font-size: 5rem;
-  color: rgba(var(--accent-color));
-  -webkit-text-stroke: .02rem rgba(var(--text-color));
+  font-weight:bold;
+  color: rgba(var(--text-color));
+  /* -webkit-text-stroke: .2rem rgba(var(--text-color)) ;
+  letter-spacing: .15rem; */
 }
 .CardPrice{
   display: block;
@@ -317,15 +319,17 @@
 }
 .CardButton{
   margin: 2rem;
+  font-family: "Jaldi", sans-serif;
+  font-weight: bold;
   display: block;
-  height: 4rem;
-  aspect-ratio: 5;
-  background-color: rgba(var(--card-color));
-  border: .12rem solid rgba(var(--text-color));
+  height: 4.5rem;
+  aspect-ratio: 4;
+  background-color: rgba(var(--accent-color));
+  -webkit-text-stroke: .05rem rgba(var(--text-color));
+  color: rgba(var(--bg-color));
+  border: .25rem solid rgba(var(--text-color));
   border-radius: 2rem;
-  font-size: 1.8rem;
-  font-weight: 600;
-  filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
+  font-size: 2.4rem;
 }
 .ServiceRuppe{
   font-size: 60%;
@@ -368,7 +372,7 @@ textarea,select {
   border-radius: 0 1rem 1rem 1rem;
   filter: drop-shadow(.2rem .2rem .1rem rgba(0, 0, 0, 0.5));
   padding: 0 0.5rem;
-  background: #F5EBE0;
+  background: rgba(var(--card-color));
   font-size: 1.4rem !important;
   height: 3rem;
   resize: none;
@@ -385,16 +389,17 @@ textarea {
 }
 .BookingButton {
   margin: 1rem;
+  font-family: "Jaldi", sans-serif;
+  font-weight: bold;
   display: block;
-  height: 4rem;
-  aspect-ratio:6;
-  background-color: #FFD6BA;
-  border: .12rem solid rgba(var(--text-color));
+  height: 4.5rem;
+  aspect-ratio: 6;
+  background-color: rgba(var(--accent-color));
+  -webkit-text-stroke: .05rem rgba(var(--text-color));
+  color: rgba(var(--bg-color));
+  border: .25rem solid rgba(var(--text-color));
   border-radius: 2rem;
-  font-size: 2rem;
-  font-weight: 600;
-  filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
-  font-family: "Crimson Text", serif;
+  font-size: 3rem;
 }
 
 @media only screen and (max-width:1600px){
@@ -572,7 +577,8 @@ textarea {
     font-size: 3.5rem;
   }
   .MainBookingContainer{
-    height: 80rem;
+    margin-bottom: 10rem;
+    height: 65rem;
     width: 80vw;
     display: flex;
     align-items: center;
@@ -585,7 +591,7 @@ textarea {
     font-size: 2rem;
   }
   input,textarea,select {
-    height: 6rem;
+    height: 4rem;
     width: 70vw;
   }
   textarea{
@@ -648,6 +654,19 @@ textarea {
   .carousel-caption h3{
     font-size: 4.5rem;
   }
+  .MainBookingContainer{
+    height: 55rem;
+    width: 90vw;
+  }
+  input,textarea,select {
+    height: 3rem;
+  }
+  textarea {
+    height: 8rem;
+  }
+  .BookingButton{
+    height: 5rem;
+  }
 }
 @media only screen and (max-width:550px){
   .HomeServiceContainer{
@@ -671,10 +690,30 @@ textarea {
   .HomeLine{
     height: .1rem;
   }
+  .MainBookingContainer{
+    height: 65rem;
+    width: 90vw;
+  }
+  input,textarea,select {
+    height: 5rem;
+  }
+  textarea{
+    height: 10rem;
+  }
 }
 @media only screen and (max-width:400px){
   :root{
     font-size: 40%;
+  }
+  .MainBookingContainer{
+    height: 80rem;
+    width: 90vw;
+  }
+  input,textarea,select {
+    height: 6rem;
+  }
+  textarea{
+    height: 18rem;
   }
 }
 @media only screen and (max-width:350px){
@@ -684,10 +723,21 @@ textarea {
   .carousel-caption h3{
     font-size: 3.5rem;
   }
+  
 }
 @media only screen and (max-width:320px){
   :root{
     font-size: 30%;
+  }
+  .MainBookingContainer{
+    height: 100rem;
+    width: 90vw;
+  }
+  input,textarea,select {
+    height: 6rem;
+  }
+  textarea{
+    height: 30rem;
   }
 }
 @media only screen and (max-width:200px){
