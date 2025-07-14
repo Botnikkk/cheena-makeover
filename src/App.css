@@ -48,7 +48,7 @@
   padding: .5rem;
 
   background-color: rgba(var(--bg-color));
-  border-radius: 4.5rem;
+  border-radius: 3.3rem;
 }
 .NavBarItem{
   all: unset;
