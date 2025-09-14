@@ -16,12 +16,7 @@ export default function Booking() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const message = `Hello! My name is ${formData.name} and i would like to inquire about ${formData.service} makeup. You can contact me here ${formData.phone} and here ${formData.email}
-  
-    ${formData.message}
-    
-    Please reply soon!`;
-    
+    const message = `Hello! My name is ${formData.name} and I would like to inquire about ${formData.service} Makeup.\n\n${formData.message}\n\nYou can contact me here: ${formData.phone} and ${formData.email}\n\nPlease reply soon!`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   
