@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+// ... (Your existing variants remain exactly the same) ...
 const titleEntryVariant = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.3, ease: "easeOut" } },
@@ -66,7 +67,14 @@ export default function Party() {
                     <span className='CardPrice'><span className='ServiceRuppe'>₹</span>8,000</span>
                     <span className='CardInText'>In Delhi/NCR</span>
                     <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>15,000</span>
-                    <Link style={{ textDecoration: 'none', display:'block' }} to='/booking'><button className='CardButton'>Book Now</button></Link>
+                    
+                    <Link 
+                        style={{ textDecoration: 'none', display:'block' }} 
+                        to='/booking'
+                        state={{ service: 'Party', type: 'HD' }} 
+                    >
+                        <button className='CardButton'>Book Now</button>
+                    </Link>
                 </motion.div>
 
                 <motion.div className='ServiceCard' variants={cardVariant}>
@@ -74,7 +82,14 @@ export default function Party() {
                     <span className='CardPrice'><span className='ServiceRuppe'>₹</span>14,000</span>
                     <span className='CardInText'>In Delhi/NCR</span>
                     <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>20,000</span>
-                    <Link style={{ textDecoration: 'none', display:'block' }} to='/booking'><button className='CardButton'>Book Now</button></Link>
+                    
+                    <Link 
+                        style={{ textDecoration: 'none', display:'block' }} 
+                        to='/booking'
+                        state={{ service: 'Party', type: 'Air Brush' }}
+                    >
+                        <button className='CardButton'>Book Now</button>
+                    </Link>
                 </motion.div>
             </motion.div>
 

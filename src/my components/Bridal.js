@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-
 const titleEntryVariant = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.3, ease: "easeOut" } },
@@ -15,7 +14,6 @@ const lineEntryVariant = {
     exit: { scaleX: 0, transition: { duration: 0.2 } }
 };
 
-
 const cardContainerVariant = {
     hidden: {},
     visible: {
@@ -25,7 +23,6 @@ const cardContainerVariant = {
         transition: { staggerChildren: 0.1, staggerDirection: -1 }
     }
 };
-
 
 const cardVariant = {
     hidden: { rotateY: -90, opacity: 0 }, 
@@ -83,7 +80,14 @@ export default function Bridal() {
                     <span className='CardPrice'><span className='ServiceRuppe'>₹</span>24,000</span>
                     <span className='CardInText'>In Delhi/NCR</span>
                     <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>34,000</span>
-                    <Link style={{ textDecoration: 'none', display:'block' }} to='/booking'><button className='CardButton'>Book Now</button></Link>
+                    
+                    <Link 
+                        style={{ textDecoration: 'none', display:'block' }} 
+                        to='/booking'
+                        state={{ service: 'Bridal', type: 'HD' }}
+                    >
+                        <button className='CardButton'>Book Now</button>
+                    </Link>
                 </motion.div>
 
                 <motion.div className='ServiceCard' variants={cardVariant}>
@@ -91,7 +95,14 @@ export default function Bridal() {
                     <span className='CardPrice'><span className='ServiceRuppe'>₹</span>34,000</span>
                     <span className='CardInText'>In Delhi/NCR</span>
                     <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>40,000</span>
-                    <Link style={{ textDecoration: 'none', display:'block' }} to='/booking'><button className='CardButton'>Book Now</button></Link>
+                    
+                    <Link 
+                        style={{ textDecoration: 'none', display:'block' }} 
+                        to='/booking'
+                        state={{ service: 'Bridal', type: 'Air Brush' }}
+                    >
+                        <button className='CardButton'>Book Now</button>
+                    </Link>
                 </motion.div>
             </motion.div>
 

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const containerFlipVariant = {
   hidden: { rotateY: -90, opacity: 0 },
@@ -17,7 +18,20 @@ const formRowVariant = {
 };
 
 export default function Booking() {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", service: "", message: "", });
+  const location = useLocation();
+  const initialService = location.state?.service || "";
+  const initialType = location.state?.type || "";
+  
+  const defaultMessage = initialType ? `I am interested in the ${initialType} package. I wish to book an appointment in Delhi NCR` : "";
+
+  const [formData, setFormData] = useState({ 
+      name: "", 
+      email: "", 
+      phone: "", 
+      service: initialService,
+      message: defaultMessage,
+  });
+  
   const phoneNumber = process.env.REACT_APP_PHONE_NUMBER;
 
   const handleChange = (e) => {

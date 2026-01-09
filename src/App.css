@@ -499,6 +499,10 @@ textarea {
   border: .25rem solid rgba(var(--text-color));
   border-radius: 2rem;
   font-size: 3rem;
+  transition: 200ms ease-in-out;
+}
+.BookingButton:hover{
+  scale: 1.1;
 }
 
 @media only screen and (max-width:1600px){
