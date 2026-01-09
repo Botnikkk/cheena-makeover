@@ -38,6 +38,12 @@
   justify-content: flex-end;
   align-items:flex-end ;
 }
+@keyframes shrink-header {
+  to {
+    height: 5.7rem; 
+    border-radius: 0;
+  }
+}
 .NavLogo{
   position: absolute;
   display: flex;
@@ -46,9 +52,11 @@
   z-index:100;
   margin: 0 10rem;
   padding: .5rem;
-
   background-color: rgba(var(--bg-color));
-  border-radius: 3.3rem;
+  border-radius: 0 0 3rem 3rem;
+  animation: shrink-header linear forwards; 
+  animation-timeline: scroll(); 
+  animation-range: 0px 100px;
 }
 .NavBarItem{
   all: unset;
@@ -59,6 +67,23 @@
   color: rgba(var(--text-color));
   margin: 0 4rem;
   cursor: pointer;
+  position: relative;
+}
+.NavBarItem::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: .2rem;
+  bottom: -.01rem;
+  left: 0;
+  background-color: rgba(var(--text-color));
+  
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 300ms ease-in-out;
+}
+.NavBarItem:not(.active):hover::after {
+  transform: scaleX(1);
 }
 .NavBarItem.active{
   -webkit-text-stroke: 0.02rem rgba(var(--text-color));
@@ -102,6 +127,10 @@
   cursor: pointer;
   margin: 1rem;
   object-fit:contain;
+  transition: 500ms ease-in-out;
+}
+.HomeServiceContainer:hover{
+  transform: scale(1.1);
 }
 .HomeServiceContainer img{
   width: 100%;
@@ -110,11 +139,19 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  text-align: center;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   font-weight: bold;
-  background-color: rgba(var(--card-color), 0.6);
+  background-color: rgba(var(--card-color), 0.5);
+  transition: 500ms ease-in-out;
+}
+.HomeServiceContainer:hover .HomeServiceText {
+  height: 100%;
+  background-color: rgba(var(--card-color), 0.8); 
 }
 .TakeMeContainer{
   display: flex;
@@ -171,6 +208,10 @@
 .socials img{
   aspect-ratio: 1;
   height: 2.7rem;
+  transition: 500ms ease-in-out;
+}
+.socials img:hover{
+  scale: 1.3;
 }
 
 /* <-------------------------------- ABOUT --------------------------------> */
@@ -186,12 +227,55 @@
   display: flex;
   align-items: center;
 }
-.AboutPicture{
-  height: 45rem;
-  margin: 12rem 5rem;
-  margin-right: 0;
-  border: 1.2rem solid rgba(var(--bg-color));
+.AboutImageContainer {
+  position: relative;
   display: inline-block;
+  margin: 10rem 5rem; 
+  margin-right: 0;
+}
+
+.AboutPicture {
+  height: 45rem;
+  display: block;
+  border: 1.2rem solid rgba(var(--bg-color));
+  transition: 500ms ease-in-out;
+}
+
+.AboutImageContainer:hover .AboutPicture {
+  transform: scale(1.05);
+  cursor:pointer;
+}
+
+.AboutImageContainer::before,
+.AboutImageContainer::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0.3rem solid rgba(var(--text-color));
+  opacity: 0;
+  transition: 500ms ease-in-out;
+  z-index: 5;
+}
+
+.AboutImageContainer::before {
+  top: -1rem;
+  right: -1rem;
+  border-left: none;
+  border-bottom: none;
+}
+.AboutImageContainer::after {
+  bottom: -1rem;
+  left: -1rem;
+  border-top: none;
+  border-right: none;
+}
+
+.AboutImageContainer:hover::before,
+.AboutImageContainer:hover::after {
+  opacity: 1;
+  width: 15rem;
+  height: 15rem;
 }
 .AboutTextContainer{
   display: inline-block;
@@ -328,6 +412,10 @@
   border: .25rem solid rgba(var(--text-color));
   border-radius: 2rem;
   font-size: 2.5rem;
+  transition: 200ms ease-in-out;
+}
+.CardButton:hover{
+  scale: 1.1;
 }
 .ServiceRuppe{
   font-size: 60%;

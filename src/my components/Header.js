@@ -43,14 +43,14 @@ const Header = () =>  {
             <ScrollLink to="home"  spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>HOME</ScrollLink>
             <ScrollLink to="about" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>ABOUT</ScrollLink>
             <ScrollLink to="gallery" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>GALLERY</ScrollLink>
-            <ScrollLink to="services" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>SERVICE</ScrollLink>
+            <ScrollLink to="services" spy={true} duration={500} className="NavBarItem" onClick={() => setMenuOpen(false)}>SERVICES</ScrollLink>
           </>
         ) : (
           <>
             <button className="NavBarItem" onClick={() => goToPageAndScroll("home")}>HOME</button>
             <button className="NavBarItem" onClick={() => goToPageAndScroll("about")}>ABOUT</button>
             <button className="NavBarItem" onClick={() => goToPageAndScroll("gallery")}>GALLERY</button>
-            <button className="NavBarItem" onClick={() => goToPageAndScroll("services")}>SERVICE</button>
+            <button className="NavBarItem active" onClick={() => goToPageAndScroll("services")}>SERVICES</button>
           </>
         )}
       </div>
