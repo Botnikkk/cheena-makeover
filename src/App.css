@@ -360,6 +360,13 @@
   gap: 1rem;
   width: 100%;
 }
+.ServicesCardWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;          
+  width: 100%;
+  perspective: 1000px; 
+}
 .ServiceLine{
   height: .2rem;
   background-color: rgba(var(--text-color));
@@ -428,9 +435,15 @@
   width: 70rem;
   background-color: rgba(var(--bg-color));
   border: .1rem solid rgba(var(--text-color));
-  filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
+  box-shadow: 0.3rem 0.3rem 0.25rem rgba(0, 0, 0, 0.5);
   border-radius: 5rem;
   padding: 5rem 10rem;
+}
+.BookingPerspectiveWrapper {
+  perspective: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .form {
   font-family: "Jaldi", sans-serif;
@@ -640,6 +653,11 @@ textarea {
     padding: 2rem;
     width: 100%;
   }
+  .ServicesCardWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
   .ServiceTitleContainer{
     font-size: 5rem
   }

@@ -1,16 +1,33 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+const containerFlipVariant = {
+  hidden: { rotateY: -90, opacity: 0 },
+  visible: { 
+    rotateY: 0, 
+    opacity: 1,
+    transition: { duration: 0.8, ease: "backOut", staggerChildren: 0.1, delayChildren: 0.3 }
+  },
+  exit: { rotateY: 90, opacity: 0, transition: { duration: 0.5 } }
+};
+
+const formRowVariant = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.4, ease: "easeOut" } }
+};
 
 export default function Booking() {
-  const [formData, setFormData] = useState({ name: "",email: "",phone: "",service: "",message: "",});
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", service: "", message: "", });
   const phoneNumber = process.env.REACT_APP_PHONE_NUMBER;
+
   const handleChange = (e) => {
-    const { name, value } = e.target; 
+    const { name, value } = e.target;
     if (name === "phone") {
-      const digits = value.replace(/\D/g, "").substring(0, 10);  
-      const formatted = digits.replace(/(\d{3})(\d{3})(\d{0,4})/, (match, p1, p2, p3) => {return p3 ? `${p1}-${p2}-${p3}` : `${p1}-${p2}`;}); 
-      setFormData((prev) => ({...prev, [name]: formatted,}));
+      const digits = value.replace(/\D/g, "").substring(0, 10);
+      const formatted = digits.replace(/(\d{3})(\d{3})(\d{0,4})/, (match, p1, p2, p3) => { return p3 ? `${p1}-${p2}-${p3}` : `${p1}-${p2}`; });
+      setFormData((prev) => ({ ...prev, [name]: formatted, }));
     } else {
-      setFormData((prev) => ({...prev,[name]: value,})); 
+      setFormData((prev) => ({ ...prev, [name]: value, }));
     }
   };
 
@@ -19,28 +36,37 @@ export default function Booking() {
     const message = `Hello! My name is ${formData.name} and I would like to inquire about ${formData.service} Makeup.\n\n${formData.message}\n\nYou can contact me here: ${formData.phone} and ${formData.email}\n\nPlease reply soon!`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-  
     window.open(whatsappUrl, "_blank");
   };
+
   return (
     <div className='section Booking'>
-        <div className='MainBookingContainer'>
+      <div className="BookingPerspectiveWrapper">
+        
+        <motion.div 
+            className='MainBookingContainer'
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={containerFlipVariant}
+            style={{ transformStyle: "preserve-3d" }} 
+        >
           <form className="form" onSubmit={handleSubmit}>
-              <div className="form-row">
+              <motion.div className="form-row" variants={formRowVariant}>
                 <div className="form-group">
                   <label>Your Name</label>
-                  <input name="name" value={formData.name} onChange={handleChange} required/>
+                  <input name="name" value={formData.name} onChange={handleChange} required />
                 </div>
                 <div className="form-group">
                   <label>Your Email</label>
-                  <input name="email" value={formData.email} onChange={handleChange} type="email" required/>
+                  <input name="email" value={formData.email} onChange={handleChange} type="email" required />
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="form-row">
+              <motion.div className="form-row" variants={formRowVariant}>
                 <div className="form-group">
                   <label>Your Phone</label>
-                  <input name="phone" value={formData.phone} onChange={handleChange} type="tel"  placeholder="123-456-7890" required/>
+                  <input name="phone" value={formData.phone} onChange={handleChange} type="tel" placeholder="123-456-7890" required />
                 </div>
                 <div className="form-group">
                   <label>Service Request</label>
@@ -50,18 +76,20 @@ export default function Booking() {
                     <option value="Party">Party</option>
                   </select>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="form-group full-width">
+              <motion.div className="form-group full-width" variants={formRowVariant}>
                 <label>Your Message</label>
-                <textarea name="message" value={formData.message} onChange={handleChange} required/>
-              </div>
+                <textarea name="message" value={formData.message} onChange={handleChange} required />
+              </motion.div>
 
-              <div className="form-submit">
+              <motion.div className="form-submit" variants={formRowVariant}>
                 <button className='BookingButton' type="submit">Send</button>
-              </div>
+              </motion.div>
+
           </form>
-        </div>
+        </motion.div>
+      </div>
     </div>
   )
 }
