@@ -1,34 +1,86 @@
-import React from 'react'
-import{Link}from'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 const phoneNumber = process.env.REACT_APP_PHONE_NUMBER;
+
+const containerVariant = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 1.0
+    }
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1
+    }
+  }
+};
+
+const flipVariant = {
+  hidden: { 
+    rotateY: -90,
+    opacity: 0 
+  },
+  visible: { 
+    rotateY: 0,
+    opacity: 1, 
+    transition: { duration: 1.2, ease: "backOut" }
+  },
+  exit: { 
+    rotateY: 90, 
+    opacity: 0, 
+    transition: { duration: 0.5, ease: "easeIn" } 
+  }
+};
 
 export default function Home() {
     const isMobileDevice = () => {return /Mobi|Android|iPhone/i.test(navigator.userAgent);};
     const handleClick = () => {
-    if (isMobileDevice()) {
-        window.location.href = `tel:${phoneNumber}`;
-    } else {
-        navigator.clipboard.writeText(phoneNumber)
-        .then(() => alert(`Phone number copied: ${phoneNumber}`))
-        .catch(() => alert("Failed to copy number"));
-    }
+        if (isMobileDevice()) {
+            window.location.href = `tel:${phoneNumber}`;
+        } else {
+            navigator.clipboard.writeText(phoneNumber)
+            .then(() => alert(`Phone number copied: ${phoneNumber}`))
+            .catch(() => alert("Failed to copy number"));
+        }
     };
+
     return (
-        < div  id='home' className='section Home'>
-            <div className='MainHomeContainer'>
-                <Link className='LINK' to='/bridal'>
-                    <div className='HomeServiceContainer'>
-                        <img fetchpriority="high" className='HomeImage' src={require('./Images/bridal.webp')} alt='BRIDAL'/>
-                        <div className='HomeServiceText'>BRIDAL</div>
-                    </div>
-                </Link>
-                <div className='HomeLogoContainer'>
+        <div id='home' className='section Home'>
+            <motion.div 
+                className='MainHomeContainer'
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={containerVariant}
+                style={{ perspective: '1500px' }} 
+            >
+                <motion.div variants={flipVariant} style={{ transformStyle: "preserve-3d" }}>
+                    <Link className='LINK' to='/bridal'>
+                        <div className='HomeServiceContainer'>
+                            <img fetchpriority="high" className='HomeImage' src={require('./Images/bridal.webp')} alt='BRIDAL'/>
+                            <div className='HomeServiceText'>BRIDAL</div>
+                        </div>
+                    </Link>
+                </motion.div>
+
+                <motion.div 
+                    className='HomeLogoContainer' 
+                    variants={flipVariant}
+                    style={{ transformStyle: "preserve-3d" }}
+                >
                     <img className='HomeLogo' src={require('./Images/logo.png')} alt='LOGO'/>
+                    
                     <div className='TakeMeContainer'>
                         <div className='HomeLine'></div>
                         <span className='HomeTakeText'>TAKE ME TO</span>
                         <div className='HomeLine'></div>
                     </div>
+                    
                     <div className='SocialContainer'>
                         <span className="SocialText">GET IN TOUCH</span>
                         <div className="socials">
@@ -38,14 +90,18 @@ export default function Home() {
                             <img onClick={handleClick} className="social"src={require('./Images/mobile.png')} alt="Phone"/>
                         </div>
                     </div>
-                </div>
-                <Link className='LINK' to='/party'>
-                    <div className='HomeServiceContainer'>
-                        <img className='HomeImage' src={require('./Images/party.webp')} alt='Party'/>
-                        <div className='HomeServiceText'>PARTY</div>
-                    </div>
-                </Link>
-            </div>
+                </motion.div>
+
+                <motion.div variants={flipVariant} style={{ transformStyle: "preserve-3d" }}>
+                    <Link className='LINK' to='/party'>
+                        <div className='HomeServiceContainer'>
+                            <img className='HomeImage' src={require('./Images/party.webp')} alt='Party'/>
+                            <div className='HomeServiceText'>PARTY</div>
+                        </div>
+                    </Link>
+                </motion.div>
+
+            </motion.div>
         </div>
-  )
+    )
 }

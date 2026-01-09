@@ -1,10 +1,26 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { motion } from 'framer-motion';
 import LeftArrow from './Images/left-arrow.svg';
 import RightArrow from './Images/right-arrow.svg';
 
 const importAll = (r) => {
   return r.keys().map(r);
+};
+
+const cardFlipVariant = {
+  hidden: { 
+    rotateY: -90,
+    opacity: 0 
+  },
+  visible: { 
+    rotateY: 0,
+    opacity: 1, 
+    transition: { 
+      duration: 1.2,
+      ease: "backOut"
+    } 
+  }
 };
 
 export default function Gallery() {
@@ -13,8 +29,17 @@ export default function Gallery() {
 
   return (
     <div id='gallery' className='section Gallery'>
-      <div className='GalleryMainContainer'>
-        <div className='CarouselContainer'>
+      
+      <div className='GalleryMainContainer' style={{ perspective: '1200px' }}>
+        
+        <motion.div 
+            className='CarouselContainer'
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardFlipVariant}
+            style={{ transformStyle: "preserve-3d" }}
+        >
           <Carousel fade prevIcon={<img className='GalleryArrow'  src={LeftArrow} alt='left-arrow'/>} nextIcon={<img className='GalleryArrow' src={RightArrow} alt='right-arrow'/>}>
             {bridalImages.map((imgSrc, index) => (
               <Carousel.Item key={`bridal-${index}`}>
@@ -23,8 +48,17 @@ export default function Gallery() {
               </Carousel.Item>
             ))}
           </Carousel>
-        </div>
-        <div className='CarouselContainer'>
+        </motion.div>
+
+        <motion.div 
+            className='CarouselContainer'
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardFlipVariant}
+            transition={{ delay: 0.2, duration: 1.2, ease: "backOut" }} 
+            style={{ transformStyle: "preserve-3d" }}
+        >
           <Carousel fade prevIcon={<img className='GalleryArrow' src={LeftArrow} alt='left-arrow'/>} nextIcon={<img className='GalleryArrow' src={RightArrow} alt='right-arrow'/>}>
             {partyImages.map((imgSrc, index) => (
               <Carousel.Item key={`party-${index}`}>
@@ -33,7 +67,7 @@ export default function Gallery() {
               </Carousel.Item>
             ))}
           </Carousel>
-        </div>
+        </motion.div>
 
       </div>
     </div>
