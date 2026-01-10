@@ -19,7 +19,7 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}>
       <Routes location={location} key={location.pathname}>
         <Route exact path='/' element={<><Home /><About /><Gallery /><Services /></>} />
         <Route exact path='/bridal' element={<Bridal />} />

@@ -580,6 +580,7 @@ textarea {
   .NavLogo{
     height: 10rem;
     margin-left: 2rem;
+    animation: none;
   }
   .HomeLogo{
     display: none;
@@ -624,15 +625,18 @@ textarea {
     margin:0;
     height:35rem;
   }
+  .AboutImageContainer{
+    margin: 0;
+  }
   .AboutTitle{
     font-size: 5rem;
+    margin-top: 5rem;
   }
   .AboutText{
     font-size: 2.3rem;
   }
   .AboutTextContainer{
-    padding:  0 3rem ;
-    margin-top: 3rem;
+    padding:  0 2rem ;
     text-align: center;
   }
   .Gallery,.Services, .Bridal,.Party{
