@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const phoneNumber = process.env.REACT_APP_PHONE_NUMBER;
 
 const desktopContainer = {
   hidden: {},
@@ -36,11 +35,17 @@ export default function Home() {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-
+    const phoneNumber = process.env.REACT_APP_PHONE_NUMBER; 
+    const handleWhatsapp = (e) => {
+        e.preventDefault();
+        const message = `Hello! I'm interested in your work and wish to enquire`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, "_blank");
+      };
     const currentContainer = isMobile ? mobileContainer : desktopContainer;
     const currentItem = isMobile ? mobileFade : desktopFlip;
 
-    const handleClick = () => {
+    const handlePhone = () => {
         if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
             window.location.href = `tel:${phoneNumber}`;
         } else {
@@ -72,9 +77,9 @@ export default function Home() {
                         <span className="SocialText">GET IN TOUCH</span>
                         <div className="socials">
                             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/cheenamakeover" className="social"><img src={require('./Images/instagram.png')} alt="Instagram"/></a>
-                            <a target="_blank" rel="noreferrer" href="https://www.facebook.com/" className="social"><img src={require('./Images/facebook.png')} alt="Facebook"/></a>
-                            <a target="_blank" rel="noreferrer" href="https://wa.me/7428147159?text=Hello!%20I'm%20interested%20in%20your%20work%20and%20wish%20to%20enquire" className="social"><img src={require('./Images/whatsapp.png')} alt="WhatsApp"/></a>
-                            <img onClick={handleClick} className="social" src={require('./Images/mobile.png')} alt="Phone"/>
+                            <a target="_blank" rel="noreferrer" href="https://maps.app.goo.gl/Fn3aXsykihVcFvyM7" className="social"><img src={require('./Images/map.png')} alt="Facebook"/></a>
+                            <img onClick={handleWhatsapp} className="social" src={require('./Images/whatsapp.png')} alt="WhatsApp"/>
+                            <img onClick={handlePhone} className="social" src={require('./Images/mobile.png')} alt="Phone"/>
                         </div>
                     </div>
                 </motion.div>
