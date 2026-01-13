@@ -43,4 +43,4 @@ The website is a Single-Page Application (SPA) providing a fluid browsing experi
 
 Nikhil Chaudhary - [@botnikkk](https://www.linkedin.com/in/botnikkk) - b.nikk.chd@gmail.com
 
-Project Link: [https://github.com/Botnikkk/cheena-makeover](https://github.com/Botnikkk/cheena-makeover)
+Project Link: [https://github.com/Botnikkk/cheena-makeover](https://github.com/Botnikkk/cheena-makeover) 
