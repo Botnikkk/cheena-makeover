@@ -77,7 +77,7 @@ export default function Home() {
                         <span className="SocialText">GET IN TOUCH</span>
                         <div className="socials">
                             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/cheenamakeover" className="social"><img src={require('./Images/instagram.png')} alt="Instagram"/></a>
-                            <a target="_blank" rel="noreferrer" href="https://maps.app.goo.gl/Fn3aXsykihVcFvyM7" className="social"><img src={require('./Images/map.png')} alt="Facebook"/></a>
+                            <a target="_blank" rel="noreferrer" href="https://maps.app.goo.gl/N7Mn3KWZ4VCD33Q19?g_st=iwb" className="social"><img src={require('./Images/map.png')} alt="Facebook"/></a>
                             <img onClick={handleWhatsapp} className="social" src={require('./Images/whatsapp.png')} alt="WhatsApp"/>
                             <img onClick={handlePhone} className="social" src={require('./Images/mobile.png')} alt="Phone"/>
                         </div>

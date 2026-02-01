@@ -38,6 +38,12 @@ const mobileCardVariant = {
   exit: { y: 20, opacity: 0, transition: { duration: 0.3 } }
 };
 
+const infoEntryVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.5, ease: "easeOut" } },
+  exit: { opacity: 0, y: 20, transition: { duration: 0.3 } }
+};
+
 export default function Bridal() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
 
@@ -59,9 +65,7 @@ export default function Bridal() {
           <motion.span className='ServiceTitle' initial="hidden" animate="visible" exit="exit" variants={titleEntryVariant}>Bridal</motion.span>
           <motion.div className='ServiceLine' initial="hidden" animate="visible" exit="exit" variants={lineEntryVariant} style={{ originX: 0 }}></motion.div>
         </div>
-
-        <motion.div className='ServicesCardWrapper' initial="hidden" animate="visible" exit="exit" variants={currentContainerVariant} style={{ perspective: '1000px' }}>
-          
+        <motion.div className='ServicesCardWrapper' initial="hidden" animate="visible" exit="exit" variants={currentContainerVariant} style={{ perspective: '1000px' }}>    
           <motion.div className='ServiceCard' variants={currentCardVariant}>
             <span className='CardTitle'>HD</span>
             <span className='CardPrice'><span className='ServiceRuppe'>₹</span>24,000</span>
@@ -69,7 +73,14 @@ export default function Bridal() {
             <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>34,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/booking' state={{ service: 'Bridal', type: 'HD' }}><button className='CardButton'>Book Now</button></Link>
           </motion.div>
-
+          <motion.div className='InfoSection' initial="hidden" animate="visible" exit="exit" variants={infoEntryVariant}>
+          <div className='InfoInner'>
+            <span className='InfoTitle'>PACKAGE INCLUSIONS</span>
+            <span className='InfoContent'>Makeup • Hair Styling • Hair Exstension • Hair Asccesories • Draping • Regular false eyelash • Nail paint change</span>
+            <span className='InfoExclusion'>EXCLUSIONS : Fresh Flowers / Gajra</span>
+          </div>
+          <span className='InfoDisclaimer'>* For out of Delhi bookings, Travel & Accommodation charges are not included.</span>
+          </motion.div>
           <motion.div className='ServiceCard' variants={currentCardVariant}>
             <span className='CardTitle'>Air Brush</span>
             <span className='CardPrice'><span className='ServiceRuppe'>₹</span>34,000</span>
@@ -79,7 +90,6 @@ export default function Bridal() {
           </motion.div>
           
         </motion.div>
-
       </div>
     </div>
   )

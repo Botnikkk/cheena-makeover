@@ -363,7 +363,7 @@
 .ServicesCardWrapper {
   display: flex;
   justify-content: center;
-  gap: 20rem;          
+  gap: 7rem;          
   width: 100%;
   perspective: 1000px; 
 }
@@ -385,6 +385,9 @@
   justify-content: center;
   font-family: "Crimson Text", serif;
   filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
+}
+.Services .ServicesCardWrapper{
+  gap: 20rem;
 }
 .CardTitle{
   display: block;
@@ -426,6 +429,46 @@
 }
 .ServiceRuppe{
   font-size: 60%;
+}
+
+.InfoSection {
+  margin: 2rem 0;
+  text-align: center;
+  width: 20rem;
+}
+
+.InfoInner {
+  padding: 2rem 0;
+  border-top: .15rem solid rgba(var(--accent-color));  
+  border-bottom: .15rem solid rgba(var(--accent-color));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.InfoTitle {
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  font-family: "Jaldi", sans-serif;
+  font-weight: bold;
+  color: rgba(var(--text-color));
+}
+
+.InfoContent, .InfoExclusion {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.InfoDisclaimer {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color:  rgba(var(--text-color));;
+  opacity: .8;
+  font-family: "Crimson Text", serif;
+  margin-top: .5rem;
 }
 /* <-------------------------------- BOOKING --------------------------------> */
 
@@ -639,8 +682,11 @@ textarea {
     padding:  0 2rem ;
     text-align: center;
   }
-  .Gallery,.Services, .Bridal,.Party{
-    height: 150vh;
+  .Gallery,.Services{
+    height: 120vh;
+  }
+  .Bridal,.Party{
+    height: 160vh;
   }
   .GalleryMainContainer{
     flex-direction: column;
@@ -665,7 +711,10 @@ textarea {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-}
+  }
+  .Services .ServicesCardWrapper{
+    gap: 2rem;
+  }
   .ServiceTitleContainer{
     font-size: 5rem
   }
@@ -687,6 +736,22 @@ textarea {
   .CardButton{
     height: 7rem;
     font-size: 3.5rem;
+  }
+  .InfoSection{
+    width: 50rem;
+  }
+  .InfoInner{
+    border-top: .2rem solid rgba(var(--accent-color));  
+  border-bottom: .2rem solid rgba(var(--accent-color));
+  }
+  .InfoTitle{
+    font-size: 4rem
+  }
+  .InfoContent, .InfoExclusion{
+    font-size: 2.4rem;
+  }
+  .InfoDisclaimer{
+    font-size: 2rem;
   }
   .MainBookingContainer{
     margin-bottom: 10rem;

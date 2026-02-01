@@ -37,6 +37,11 @@ const mobileCardVariant = {
   visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
   exit: { y: 20, opacity: 0, transition: { duration: 0.3 } }
 };
+const infoEntryVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.5, ease: "easeOut" } },
+  exit: { opacity: 0, y: 20, transition: { duration: 0.3 } }
+};
 
 export default function Party() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
@@ -64,17 +69,24 @@ export default function Party() {
           
           <motion.div className='ServiceCard' variants={currentCardVariant}>
             <span className='CardTitle'>HD</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>8,000</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>6,000</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>15,000</span>
+            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>10,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/booking' state={{ service: 'Party', type: 'HD' }}><button className='CardButton'>Book Now</button></Link>
           </motion.div>
-
+          <motion.div className='InfoSection' initial="hidden" animate="visible" exit="exit" variants={infoEntryVariant}>
+          <div className='InfoInner'>
+            <span className='InfoTitle'>PACKAGE INCLUSIONS</span>
+            <span className='InfoContent'>Makeup • Hair Styling • Draping • Regular false eyelash • Nail paint change</span>
+            <span className='InfoExclusion'>EXCLUSIONS : Fresh Flowers / Gajra • Hair Exstension • Hair Asccesories</span>
+          </div>
+          <span className='InfoDisclaimer'>* For out of Delhi bookings, Travel & Accommodation charges are not included.</span>
+          </motion.div>
           <motion.div className='ServiceCard' variants={currentCardVariant}>
             <span className='CardTitle'>Air Brush</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>14,000</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>10,000</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>20,000</span>
+            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>15,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/booking' state={{ service: 'Party', type: 'Air Brush' }}><button className='CardButton'>Book Now</button></Link>
           </motion.div>
 
