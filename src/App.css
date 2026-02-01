@@ -38,25 +38,11 @@
   justify-content: flex-end;
   align-items:flex-end ;
 }
-@keyframes shrink-header {
-  to {
-    height: 5.7rem; 
-    border-radius: 0;
-  }
-}
-.NavLogo{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  height: 10rem;
-  z-index:100;
-  margin: 0 10rem;
+.NavLogo{  
   padding: .5rem;
   background-color: rgba(var(--bg-color));
-  border-radius: 0 0 3rem 3rem;
-  animation: shrink-header linear forwards; 
-  animation-timeline: scroll(); 
-  animation-range: 0px 100px;
+  display: block;
+  
 }
 .NavBarItem{
   all: unset;
@@ -620,10 +606,14 @@ textarea {
   .NavBarItem {
     font-size: 5rem;
   }
-  .NavLogo{
-    height: 10rem;
-    margin-left: 2rem;
-    animation: none;
+  .NavLogo {
+    height: 10rem !important; 
+    margin: 0 !important;
+    margin-left: 2rem !important;
+    border-radius: 0 !important;
+    
+    position: fixed !important; 
+    top: 0 !important;
   }
   .HomeLogo{
     display: none;
