@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink, scroller } from "react-scroll";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import logo from "./Images/Assets/logo.png";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const path = useLocation().pathname;
@@ -38,7 +40,7 @@ const Header = () => {
     <nav className="NavBar">
       <motion.img 
         className="NavLogo" 
-        src={require("./Images/logo.png")} 
+        src={logo} 
         alt="LOGO"
         style={{
           height: logoHeight,

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { motion } from 'framer-motion';
 import { client, urlFor } from '../sanityClient';
-import LeftArrow from './Images/left-arrow.svg';
-import RightArrow from './Images/right-arrow.svg';
+import LeftArrow from './Images/Assets/left-arrow.svg';
+import RightArrow from './Images/Assets/right-arrow.svg';
 
 const desktopVariant = {
   hidden: { rotateY: -90, opacity: 0 },

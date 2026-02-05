@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import about from './Images/Assets/about.webp';
 
 const desktopImageVariant = {
   hidden: { rotateY: -90, opacity: 0 },
@@ -38,7 +39,7 @@ export default function About() {
       <div className='MainAboutContainer' style={{ perspective: '1200px' }}>
         <motion.div className="AboutImageWrapper" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={currentImageVariant} style={{ transformStyle: "preserve-3d", display: 'inline-block' }}>
           <a target="_blank" rel="noreferrer" href="https://www.instagram.com/p/CnGf2-SvqaJ/" className="AboutImageContainer">
-            <img className='AboutPicture' src={require('./Images/about.webp')} alt='ABOUT'/>
+            <img className='AboutPicture' src={about} alt='ABOUT'/>
           </a>
         </motion.div>
 

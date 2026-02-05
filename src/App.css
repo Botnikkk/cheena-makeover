@@ -13,13 +13,18 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-image: url(./my\ components/Images/MainScreen.png);
+  background-image: url(./my\ components/Images/Backrounds/MainScreen.png);
   background-color: rgba(var(--bg-color),0.3);
   background-blend-mode: lighten;
   background-size: 100% 100%;
 }
 .LINK{
   all: unset;
+}
+input, textarea, button, select {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
 }
 /* <------------------------------ HEADER ------------------------------> */
 
@@ -79,7 +84,7 @@
   border-radius: 2rem;
 }
 .mobile-icon {
-  font-size: 5rem;
+  font-size: 7rem;
   color: rgba(var(--text-color));
   border: none;
   background: none;
@@ -88,7 +93,6 @@
   position: absolute;
   right: 1rem;
   z-index: 9999;
-  bottom: 1rem;
 }
 
 
@@ -203,7 +207,7 @@
 /* <-------------------------------- ABOUT --------------------------------> */
 
 .About{
-  background-image: url(./my\ components/Images/AboutScreen.png);
+  background-image: url(./my\ components/Images/Backrounds/AboutScreen.png);
   background-size: 100% 100%;
 }
 
@@ -575,10 +579,10 @@ textarea {
     font-size: 50%;
   }
   .section{
-    background-image: url(./my\ components/Images/MainScreen900.png);
+    background-image: url(./my\ components/Images/Backrounds/MainScreen900.png);
   }
   .About{
-    background-image: url(./my\ components/Images/AboutScreen900.png);
+    background-image: url(./my\ components/Images/Backrounds/AboutScreen900.png);
   }
   .mobile-icon {
     display: block;
@@ -611,7 +615,6 @@ textarea {
     margin: 0 !important;
     margin-left: 2rem !important;
     border-radius: 0 !important;
-    
     position: fixed !important; 
     top: 0 !important;
   }
@@ -745,7 +748,8 @@ textarea {
   }
   .MainBookingContainer{
     margin-bottom: 10rem;
-    height: 65rem;
+    min-height: 65rem;
+    height: auto;
     width: 80vw;
     display: flex;
     align-items: center;
@@ -755,9 +759,10 @@ textarea {
     flex-direction: column;
   }
   .form-group label {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-  input,textarea,select {
+  input,textarea,select{
+    font-size: 2.3rem !important;
     height: 4rem;
     width: 70vw;
   }
@@ -765,7 +770,7 @@ textarea {
     height: 15rem;
   }
   .BookingButton{
-    font-size: 3em;
+    font-size: 3.5rem;
     height: 6rem;
     width: 30rem;
   }

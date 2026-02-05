@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+import instagram from './Images/Socials/instagram.svg';
+import maps from './Images/Socials/maps.svg';
+import whatsapp from './Images/Socials/whatsapp.svg';
+import call from './Images/Socials/call.svg';
+import bridal from "./Images/Assets/bridal.webp";
+import party from "./Images/Assets/party.webp";
+import logo from "./Images/Assets/logo.png";
 
 const desktopContainer = {
   hidden: {},
@@ -61,13 +68,13 @@ export default function Home() {
                 <motion.div variants={currentItem} style={{ transformStyle: "preserve-3d" }}>
                     <Link className='LINK' to='/bridal'>
                         <div className='HomeServiceContainer'>
-                            <img fetchPriority="high" className='HomeImage' src={require('./Images/bridal.webp')} alt='BRIDAL'/>
+                            <img fetchPriority="high" className='HomeImage' src={bridal} alt='BRIDAL'/>
                             <div className='HomeServiceText'>BRIDAL</div>
                         </div>
                     </Link>
                 </motion.div>
                 <motion.div className='HomeLogoContainer' variants={currentItem} style={{ transformStyle: "preserve-3d" }}>
-                    <img className='HomeLogo' src={require('./Images/logo.png')} alt='LOGO'/>
+                    <img className='HomeLogo' src={logo} alt='LOGO'/>
                     <div className='TakeMeContainer'>
                         <div className='HomeLine'></div>
                         <span className='HomeTakeText'>TAKE ME TO</span>
@@ -76,17 +83,17 @@ export default function Home() {
                     <div className='SocialContainer'>
                         <span className="SocialText">GET IN TOUCH</span>
                         <div className="socials">
-                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/cheenamakeover" className="social"><img src={require('./Images/instagram.png')} alt="Instagram"/></a>
-                            <a target="_blank" rel="noreferrer" href="https://maps.app.goo.gl/N7Mn3KWZ4VCD33Q19?g_st=iwb" className="social"><img src={require('./Images/map.png')} alt="Facebook"/></a>
-                            <img onClick={handleWhatsapp} className="social" src={require('./Images/whatsapp.png')} alt="WhatsApp"/>
-                            <img onClick={handlePhone} className="social" src={require('./Images/mobile.png')} alt="Phone"/>
+                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/cheenamakeover" className="social"><img src={instagram} alt="Instagram"/></a>
+                            <a target="_blank" rel="noreferrer" href="https://maps.app.goo.gl/N7Mn3KWZ4VCD33Q19?g_st=iwb" className="social"><img src={maps} alt="Facebook"/></a>
+                            <img onClick={handleWhatsapp} className="social" src={whatsapp} alt="WhatsApp"/>
+                            <img onClick={handlePhone} className="social" src={call} alt="Phone"/>
                         </div>
                     </div>
                 </motion.div>
                 <motion.div variants={currentItem} style={{ transformStyle: "preserve-3d" }}>
                     <Link className='LINK' to='/party'>
                         <div className='HomeServiceContainer'>
-                            <img className='HomeImage' src={require('./Images/party.webp')} alt='Party'/>
+                            <img className='HomeImage' src={party} alt='Party'/>
                             <div className='HomeServiceText'>PARTY</div>
                         </div>
                     </Link>
