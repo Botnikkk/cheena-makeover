@@ -54,6 +54,8 @@ export default function Party() {
 
   const currentContainerVariant = isMobile ? mobileContainerVariant : desktopContainerVariant;
   const currentCardVariant = isMobile ? mobileCardVariant : desktopCardVariant;
+  const partyHD = process.env.REACT_APP_PARTY_HD || "PRICE NOT FOUND"; 
+  const partyAir = process.env.REACT_APP_PARTY_AIR || "PRICE NOT FOUND";
 
   return (
     <div className='section Party'>
@@ -69,9 +71,8 @@ export default function Party() {
           
           <motion.div className='ServiceCard' variants={currentCardVariant}>
             <span className='CardTitle'>HD</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>6,000</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{partyHD}</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>10,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/booking' state={{ service: 'Party', type: 'HD' }}><button className='CardButton'>Book Now</button></Link>
           </motion.div>
           <motion.div className='InfoSection' initial="hidden" animate="visible" exit="exit" variants={infoEntryVariant}>
@@ -84,9 +85,8 @@ export default function Party() {
           </motion.div>
           <motion.div className='ServiceCard' variants={currentCardVariant}>
             <span className='CardTitle'>Air Brush</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>10,000</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{partyAir}</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>15,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/booking' state={{ service: 'Party', type: 'Air Brush' }}><button className='CardButton'>Book Now</button></Link>
           </motion.div>
 

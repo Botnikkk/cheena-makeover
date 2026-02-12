@@ -55,6 +55,8 @@ export default function Bridal() {
 
   const currentContainerVariant = isMobile ? mobileContainerVariant : desktopContainerVariant;
   const currentCardVariant = isMobile ? mobileCardVariant : desktopCardVariant;
+  const bridalHD = process.env.REACT_APP_BRIDAL_HD || "PRICE NOT FOUND"; 
+  const bridalAir = process.env.REACT_APP_BRIDAL_AIR || "PRICE NOT FOUND";
 
   return (
     <div className='section Bridal'>
@@ -68,9 +70,8 @@ export default function Bridal() {
         <motion.div className='ServicesCardWrapper' initial="hidden" animate="visible" exit="exit" variants={currentContainerVariant} style={{ perspective: '1000px' }}>    
           <motion.div className='ServiceCard' variants={currentCardVariant}>
             <span className='CardTitle'>HD</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>24,000</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{bridalHD}</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>34,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/booking' state={{ service: 'Bridal', type: 'HD' }}><button className='CardButton'>Book Now</button></Link>
           </motion.div>
           <motion.div className='InfoSection' initial="hidden" animate="visible" exit="exit" variants={infoEntryVariant}>
@@ -83,9 +84,8 @@ export default function Bridal() {
           </motion.div>
           <motion.div className='ServiceCard' variants={currentCardVariant}>
             <span className='CardTitle'>Air Brush</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>34,000</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{bridalAir}</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>40,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/booking' state={{ service: 'Bridal', type: 'Air Brush' }}><button className='CardButton'>Book Now</button></Link>
           </motion.div>
           

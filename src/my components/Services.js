@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+
 const lineVariant = {
   hidden: { scaleX: 0 },
   visible: { scaleX: 1, transition: { duration: 0.8, ease: "circOut" } },
@@ -36,6 +37,8 @@ export default function Services() {
   }, []);
 
   const currentCardVariant = isMobile ? cardFadeVariant : cardFlipVariant;
+  const partyHD = process.env.REACT_APP_PARTY_HD || "PRICE NOT FOUND"; 
+  const bridalHD = process.env.REACT_APP_BRIDAL_HD || "PRICE NOT FOUND";
 
   return (
     <div id='services' className='section Services'>
@@ -54,17 +57,15 @@ export default function Services() {
         <div className='ServicesCardWrapper' style={{ perspective: '1200px' }}>
           <motion.div className='ServiceCard' initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={currentCardVariant} exit="exit" style={{ transformStyle: "preserve-3d" }}>
             <span className='CardTitle'>Bridal</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>24,000</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{bridalHD}</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>34,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/bridal'><button className='CardButton'>View Details</button></Link>
           </motion.div>
 
           <motion.div className='ServiceCard' initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={currentCardVariant} transition={{ ...currentCardVariant.visible.transition, delay: 0.2 }} exit="exit" style={{ transformStyle: "preserve-3d" }}>
             <span className='CardTitle'>Party</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>8,000</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{partyHD}</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <span className='CardOutText'>Out of Delhi : <span className='ServiceRuppe'>₹</span>15,000</span>
             <Link style={{ textDecoration: 'none', display:'block' }} to='/party'><button className='CardButton'>View Details</button></Link>
           </motion.div>
         </div>
