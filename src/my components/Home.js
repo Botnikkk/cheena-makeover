@@ -66,7 +66,7 @@ export default function Home() {
         <div id='home' className='section Home'>
             <motion.div className='MainHomeContainer' initial="hidden" animate="visible" exit="exit" variants={currentContainer} style={{ perspective: '1500px' }}>
                 <motion.div variants={currentItem} style={{ transformStyle: "preserve-3d" }}>
-                    <Link className='LINK' to='/bridal'>
+                    <Link className='LINK' to='/bridalcocktail'>
                         <div className='HomeServiceContainer'>
                             <img fetchPriority="high" className='HomeImage' src={bridal} alt='BRIDAL'/>
                             <div className='HomeServiceText'>BRIDAL</div>

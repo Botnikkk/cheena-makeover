@@ -363,6 +363,9 @@ input, textarea, button, select {
   display: inline-block;
   width: 50% ;
 }
+.BridalCocktail .ServiceLine,.Cocktail .ServiceLine{
+  width: 35%; 
+}
 .ServiceCard{
   aspect-ratio: 1;
   height: 28rem;
@@ -415,9 +418,6 @@ input, textarea, button, select {
   font-size: 2.5rem;
   transition: 200ms ease-in-out;
 }
-/* .Services .CardButton{
-  margin-top: 5rem;
-} */
 .CardButton:hover{
   scale: 1.1;
 }
@@ -682,7 +682,7 @@ textarea {
   .Gallery,.Services{
     height: 120vh;
   }
-  .Bridal,.Party{
+  .Bridal,.Party, .Cocktail{
     height: 160vh;
   }
   .GalleryMainContainer{
@@ -714,6 +714,9 @@ textarea {
   }
   .ServiceTitleContainer{
     font-size: 5rem
+  }
+  .BridalCocktail .ServiceLine, .Cocktail .ServiceLine{
+    width: 25%; 
   }
   .ServiceCard{
     height: 50rem;
@@ -797,6 +800,9 @@ textarea {
   .HomeLine{
     height: .2rem;
   }
+  .BridalCocktail .ServiceLine, .Cocktail .ServiceLine{
+    width: 20%; 
+  }
   .socials{
     height: 8rem;
   }
@@ -817,6 +823,9 @@ textarea {
   }
   .HomeLine{
     height: .1rem;
+  }
+  .BridalCocktail .ServiceLine,.Cocktail .ServiceLine{
+    width: 10%; 
   }
   .AboutTitle{
     font-size: 4rem;
@@ -847,6 +856,9 @@ textarea {
 @media only screen and (max-width:550px){
   .HomeServiceContainer{
     height: 35rem;
+  }
+  .BridalCocktail .ServiceLine,.Cocktail .ServiceLine{
+    width: 5%; 
   }
 }
 @media only screen and (max-width:500px){

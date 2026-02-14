@@ -37,18 +37,18 @@ export default function Services() {
   }, []);
 
   const currentCardVariant = isMobile ? cardFadeVariant : cardFlipVariant;
-  const partyHD = process.env.REACT_APP_PARTY_HD || "PRICE NOT FOUND"; 
+  const cocktailHD = process.env.REACT_APP_COCKTAIL_HD || "PRICE NOT FOUND"; 
   const bridalHD = process.env.REACT_APP_BRIDAL_HD || "PRICE NOT FOUND";
 
   return (
-    <div id='services' className='section Services'>
+    <div id='services' className='section Services BridalCocktail'>
       <div className='MainServiceContainer'>
         
         <div className='ServiceTitleContainer'>
           <motion.div className='ServiceLine' initial="hidden" whileInView="visible" viewport={{ once: true }} exit="exit" variants={lineVariant} style={{ originX: 1 }}></motion.div>
           
           <motion.span className='ServiceTitle' initial="hidden" whileInView="visible" viewport={{ once: true }} exit="exit" variants={titleVariant}>
-            Services
+            Bridal & Cocktail
           </motion.span>
           
           <motion.div className='ServiceLine' initial="hidden" whileInView="visible" viewport={{ once: true }} exit="exit" variants={lineVariant} style={{ originX: 0 }}></motion.div>
@@ -59,14 +59,14 @@ export default function Services() {
             <span className='CardTitle'>Bridal</span>
             <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{bridalHD}</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <Link style={{ textDecoration: 'none', display:'block' }} to='/bridalCocktail'><button className='CardButton'>View Details</button></Link>
+            <Link style={{ textDecoration: 'none', display:'block' }} to='/bridal'><button className='CardButton'>View Details</button></Link>
           </motion.div>
 
           <motion.div className='ServiceCard' initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={currentCardVariant} transition={{ ...currentCardVariant.visible.transition, delay: 0.2 }} exit="exit" style={{ transformStyle: "preserve-3d" }}>
-            <span className='CardTitle'>Party</span>
-            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{partyHD}</span>
+            <span className='CardTitle'>Cocktail</span>
+            <span className='CardPrice'><span className='ServiceRuppe'>₹</span>{cocktailHD}</span>
             <span className='CardInText'>In Delhi/NCR</span>
-            <Link style={{ textDecoration: 'none', display:'block' }} to='/party'><button className='CardButton'>View Details</button></Link>
+            <Link style={{ textDecoration: 'none', display:'block' }} to='/cocktail'><button className='CardButton'>View Details</button></Link>
           </motion.div>
         </div>
 

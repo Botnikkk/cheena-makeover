@@ -9,6 +9,8 @@ import Home from './my components/Home';
 import About from './my components/About';
 import Bridal from './my components/Bridal';
 import Party from './my components/Party';
+import Cocktail from './my components/Cocktail';
+import BridalCocktail from './my components/BridalCocktail';
 import Booking from './my components/Booking';
 
 const Gallery = lazy(() => import('./my components/Gallery'));
@@ -23,6 +25,8 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route exact path='/' element={<><Home /><About /><Gallery /><Services /></>} />
         <Route exact path='/bridal' element={<Bridal />} />
+        <Route exact path='/bridalcocktail' element={<BridalCocktail />} />
+        <Route exact path='/cocktail' element={<Cocktail />} />
         <Route exact path='/party' element={<Party />} />
         <Route exact path='/booking' element={<Booking />} />
       </Routes>
