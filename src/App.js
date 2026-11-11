@@ -1,34 +1,40 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import React, { lazy } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import "./App.css";
+import React from "react";
+import { HashRouter, BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
-import Header from './my components/Header';
-import Home from './my components/Home';
-import About from './my components/About';
-import Bridal from './my components/Bridal';
-import Party from './my components/Party';
-import Cocktail from './my components/Cocktail';
-import BridalCocktail from './my components/BridalCocktail';
-import Booking from './my components/Booking';
+import ErrorBoundary from "./components/ErrorBoundary";
+import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import Bridal from "./pages/Bridal";
+import BridalCocktail from "./pages/BridalCocktail";
+import Cocktail from "./pages/Cocktail";
+import Party from "./pages/Party";
+import Booking from "./pages/Booking";
 
-const Gallery = lazy(() => import('./my components/Gallery'));
-const Services = lazy(() => import('./my components/Services'));
+// Hash URLs (site/#/bridal) work on any static host with no configuration, but
+// search engines ignore everything after the `#`. For a real-URL build set
+// REACT_APP_ROUTER=browser and make the host serve index.html for unknown paths
+// (see CHANGES.md). Only works when the site is served from the domain root.
+const USE_BROWSER_ROUTER = process.env.REACT_APP_ROUTER === "browser";
+const Router = USE_BROWSER_ROUTER ? BrowserRouter : HashRouter;
+const routerProps = USE_BROWSER_ROUTER ? { basename: process.env.PUBLIC_URL || "/" } : {};
 
+const scrollToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 
 const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}>
+    <AnimatePresence mode="wait" onExitComplete={scrollToTop}>
       <Routes location={location} key={location.pathname}>
-        <Route exact path='/' element={<><Home /><About /><Gallery /><Services /></>} />
-        <Route exact path='/bridal' element={<Bridal />} />
-        <Route exact path='/bridalcocktail' element={<BridalCocktail />} />
-        <Route exact path='/cocktail' element={<Cocktail />} />
-        <Route exact path='/party' element={<Party />} />
-        <Route exact path='/booking' element={<Booking />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/bridal" element={<Bridal />} />
+        <Route path="/bridalcocktail" element={<BridalCocktail />} />
+        <Route path="/cocktail" element={<Cocktail />} />
+        <Route path="/party" element={<Party />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AnimatePresence>
   );
@@ -36,12 +42,13 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <AnimatedRoutes />
-    </Router>
+    <ErrorBoundary>
+      <Router {...routerProps}>
+        <Header />
+        <AnimatedRoutes />
+      </Router>
+    </ErrorBoundary>
   );
 }
 
 export default App;
-

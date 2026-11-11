@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,19 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
+/* `100%`, not `100vw`: 100vw includes the scrollbar and makes the page wider than the viewport. */
 html, body {
-  width: 100vw;
+  width: 100%;
   margin: 0rem;
   padding: 0rem;
-  overflow-x:hidden;
   scroll-behavior: smooth;
   background-color: #FEFCF3;
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
 }
-

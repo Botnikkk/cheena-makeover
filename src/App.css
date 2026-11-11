@@ -1,4 +1,3 @@
-
 :root {
   --bg-color: 241, 240, 232;
   --card-color: 208, 184, 172;
@@ -6,15 +5,15 @@
   --text-color: 75, 59, 59;
 }
 .section {
-  min-height: 100svh;
   min-height: 100vh;
+  min-height: 100svh;
   width: 100%;
   display: block;
   justify-items: center;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-image: url(./my\ components/Images/Backrounds/MainScreen.png);
+  background-image: url(./assets/backgrounds/main.webp);
   background-color: rgba(var(--bg-color),0.3);
   background-blend-mode: lighten;
   background-size: 100% 100%;
@@ -36,7 +35,7 @@ input, textarea, button, select {
   position: fixed;
   z-index:9;
   top:0;
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   background-color: rgba(var(--bg-color));
   border-bottom: .2rem solid rgba(var(--accent-color));
@@ -211,7 +210,7 @@ input, textarea, button, select {
 /* <-------------------------------- ABOUT --------------------------------> */
 
 .About{
-  background-image: url(./my\ components/Images/Backrounds/AboutScreen.png);
+  background-image: url(./assets/backgrounds/about.webp);
   background-size: 100% 100%;
 }
 
@@ -324,7 +323,7 @@ input, textarea, button, select {
   height: 35rem;
   overflow: hidden;
   border: .1rem solid rgba(var(--text-color));
-  filter: drop-shadow(.3rem .3rem .3rem rgba(0, 0, 0, 0.5));
+  box-shadow: .3rem .3rem .6rem rgba(0, 0, 0, 0.5);
   border-radius: 5%;
 }
 .GalleryImage{
@@ -381,7 +380,7 @@ input, textarea, button, select {
   align-items: center;
   justify-content: center;
   font-family: "Crimson Text", serif;
-  filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.5));
+  box-shadow: .3rem .3rem .5rem rgba(0, 0, 0, 0.5);
 }
 .Services .ServicesCardWrapper{
   gap: 20rem;
@@ -401,11 +400,6 @@ input, textarea, button, select {
   display: block;
   font-size: 1.3rem;
   color: rgba(0, 0, 0, 0.5);
-}
-.CardOutText{
-  margin-top: 2rem;
-  display: block;
-  font-size: 1.5rem
 }
 .CardButton{
   margin: 2rem;
@@ -463,7 +457,7 @@ input, textarea, button, select {
   display: block;
   font-size: 1rem;
   font-weight: 600;
-  color:  rgba(var(--text-color));;
+  color: rgba(var(--text-color));
   opacity: .8;
   font-family: "Crimson Text", serif;
   margin-top: .5rem;
@@ -471,8 +465,8 @@ input, textarea, button, select {
 /* <-------------------------------- BOOKING --------------------------------> */
 
 .MainBookingContainer{
-  margin-top: 9rem;
-  height: 40rem;
+  margin-top: 7rem;
+  height: 38rem;
   width: 70rem;
   background-color: rgba(var(--bg-color));
   border: .1rem solid rgba(var(--text-color));
@@ -504,21 +498,21 @@ input, textarea, button, select {
 .form-group label {
   font-weight: bold;
   margin-bottom: 0.1rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 input,
 textarea,select {
   border: .1rem solid rgba(var(--text-color));
   border-radius: 0 1rem 1rem 1rem;
-  filter: drop-shadow(.2rem .2rem .1rem rgba(0, 0, 0, 0.5));
+  box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.5);
   padding: 0 0.5rem;
   background: rgba(var(--card-color));
-  font-size: 1.4rem !important;
+  font-size: 1.42rem !important;
   height: 3rem;
   resize: none;
 }
 textarea {
-  height: 10rem;
+  height: 8rem;
 }
 .full-width {
   margin-bottom: 2rem;
@@ -533,17 +527,66 @@ textarea {
   font-weight: bold;
   display: block;
   height: 4.5rem;
-  aspect-ratio: 6;
+  aspect-ratio: 4;
   background-color: rgba(var(--accent-color));
   -webkit-text-stroke: .1rem rgba(var(--text-color));
   color: rgba(var(--bg-color));
   border: .25rem solid rgba(var(--text-color));
   border-radius: 2rem;
-  font-size: 3rem;
+  font-size: 2.8rem;
   transition: 200ms ease-in-out;
 }
 .BookingButton:hover{
   scale: 1.1;
+}
+
+/* <-------------------------------- LINKS AS BUTTONS --------------------------------> */
+/* Card buttons are <a> elements now; Bootstrap's `a:hover` colour must not win. */
+a.CardButton,
+a.CardButton:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgba(var(--bg-color));
+}
+.socials a {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* <-------------------------------- GALLERY MESSAGE --------------------------------> */
+.GalleryMessage {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  padding: 30vh 2rem 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* <-------------------------------- KEYBOARD FOCUS --------------------------------> */
+/* `all: unset` on .LINK / .NavBarItem removes the browser's focus ring, so draw our own. */
+.NavBarItem:focus-visible,
+.mobile-icon:focus-visible,
+.CardButton:focus-visible,
+.BookingButton:focus-visible,
+.AboutImageContainer:focus-visible {
+  outline: .25rem solid rgba(var(--text-color));
+  outline-offset: .3rem;
+}
+.socials a:focus-visible {
+  outline: .25rem solid rgba(var(--bg-color));
+  outline-offset: .3rem;
+}
+.LINK:focus-visible .HomeServiceContainer {
+  transform: scale(1.1);
+}
+.LINK:focus-visible .HomeServiceText {
+  height: 100%;
+  background-color: rgba(var(--card-color), 0.8);
 }
 
 @media only screen and (max-width:1600px){
@@ -587,10 +630,10 @@ textarea {
     font-size: 50%;
   }
   .section{
-    background-image: url(./my\ components/Images/Backrounds/MainScreen900.png);
+    background-image: url(./assets/backgrounds/main-mobile.webp);
   }
   .About{
-    background-image: url(./my\ components/Images/Backrounds/AboutScreen900.png);
+    background-image: url(./assets/backgrounds/about-mobile.webp);
   }
   .mobile-icon {
     display: block;
@@ -598,7 +641,8 @@ textarea {
   .NavContainer {
     position: absolute;
     height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100%;
     top:0;
     left: 0;
     display: flex;
@@ -608,12 +652,14 @@ textarea {
     gap: 10rem;
     background: #f9f1e8;
     z-index: 999;
-    transition: all .5s ease-in-out;
     transform: translateX(+100%);
+    visibility: hidden; /* closed menu must not be focusable */
+    transition: transform .5s ease-in-out, visibility 0s linear .5s;
   }
   .NavContainer.active {
     transform: translateX(0);
-    transition: all .5s ease-in-out;
+    visibility: visible;
+    transition: transform .5s ease-in-out, visibility 0s;
   }
   .NavBarItem {
     font-size: 5rem;
@@ -684,10 +730,12 @@ textarea {
     text-align: center;
   }
   .Gallery,.Services{
-    height: 120vh;
+    min-height: 120vh;
+    height: auto;
   }
   .Bridal,.Party, .Cocktail{
-    height: 160vh;
+    min-height: 160vh;
+    height: auto;
   }
   .GalleryMainContainer{
     flex-direction: column;
@@ -717,45 +765,42 @@ textarea {
     gap: 2rem;
   }
   .ServiceTitleContainer{
-    font-size: 5rem
+    font-size: 4rem
   }
   .BridalCocktail .ServiceLine, .Cocktail .ServiceLine{
     width: 25%; 
   }
   .ServiceCard{
-    height: 50rem;
+    height: 40rem;
   }
   .CardTitle{
-    font-size: 8.5rem;
+    font-size: 6.5rem;
   }
   .CardPrice{
-    font-size: 7rem;
+    font-size: 5.5rem;
   }
   .CardInText{
-    font-size: 2rem;
-  }
-  .CardOutText{
-    font-size: 2.5rem;
+    font-size: 1.7rem;
   }
   .CardButton{
-    height: 7rem;
-    font-size: 3.5rem;
+    height: 5.5rem;
+    font-size: 2.8rem;
   }
   .InfoSection{
-    width: 50rem;
+    width: 42rem;
   }
   .InfoInner{
     border-top: .2rem solid rgba(var(--accent-color));  
   border-bottom: .2rem solid rgba(var(--accent-color));
   }
   .InfoTitle{
-    font-size: 4rem
+    font-size: 3.2rem
   }
   .InfoContent, .InfoExclusion{
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   .InfoDisclaimer{
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .MainBookingContainer{
     margin-bottom: 10rem;
@@ -837,8 +882,11 @@ textarea {
   .AboutText{
     font-size: 2rem;
   }
-  .CarouselContainer, .GalleryImage,.ServiceCard{
+  .CarouselContainer, .GalleryImage{
     height: 45rem;
+  }
+  .ServiceCard{
+    height: 36rem;
   }
   .carousel-caption h3{
     font-size: 4.5rem;
